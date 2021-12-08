@@ -1,0 +1,89 @@
+.cta {
+  // padding: $base-padding * 9.4 0 $base-padding * 3.5;
+  text-align: center;
+  background: $color-black;
+  .section-header {
+    @include media-breakpoint-down-sm {
+      padding: $base-padding * 4.2 0 $base-padding * 6.3;
+    }
+    h2 {
+      color: $color-white;
+      margin-bottom: $base-margin * 1.5;
+    }
+    p {
+      color: #f7f8fa;
+      width: 70%;
+      margin: 0 auto $base-margin * 2.5;
+      @include media-breakpoint-down-xl {
+        width: 80%;
+      }
+      @include media-breakpoint-down-sm {
+        width: 100%;
+        color: #e6ebf4;
+      }
+    }
+  }
+
+  &-subscribe-form {
+    .from-group {
+      position: relative;
+      .input-group {
+        padding: 0;
+
+        .form-control {
+          position: relative;
+          color: $color-white;
+          border-radius: 24px;
+          border-bottom-right-radius: 24px !important;
+          border-top-right-radius: 24px !important;
+          padding: 35px 200px 31px 33px;
+          background: rgba(229, 59, 42, 0.15);
+          border: 1.20519px solid #e53b2a;
+          z-index: 0;
+          @include media-breakpoint-down-sm {
+            padding: 20px 180px 20px 20px;
+          }
+        }
+        ::placeholder {
+          color: #ffe1dd;
+        }
+        .subscribe {
+          position: absolute;
+          z-index: 1;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 10px;
+          .btn-lg {
+            padding: $base-padding * 1.2 $base-padding * 2.2;
+            @include media-breakpoint-down-sm {
+              padding: $base-padding * 0.7 $base-padding * 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-two {
+    padding: $base-padding * 0 0 $base-padding * 8.5;
+    background: #fff4f2;
+    .section-header {
+      padding-top: $base-padding * 6.2;
+      h2 {
+        color: $color-black;
+      }
+      p {
+        color: $color-text-light;
+      }
+    }
+
+    .cta-subscribe-form {
+      .from-group {
+        .input-group {
+          ::placeholder {
+            color: #e53b2a;
+          }
+        }
+      }
+    }
+  }
+}

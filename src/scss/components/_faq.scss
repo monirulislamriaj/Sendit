@@ -1,0 +1,74 @@
+/********** 
+  18. FAQ Section Styles
+**********/
+.faq {
+  position: relative;
+  padding: $base-padding * 0 0 $base-padding * 7.5;
+  background: #fff4f2;
+  .section-header {
+    padding-bottom: $base-padding * 5;
+  }
+  &-item {
+    //display: none;
+    width: calc(50% - 32px);
+    margin-right: $base-margin * 1.5;
+    .card {
+      transition: all 0.3s ease-in-out;
+      //text-align: center;
+      padding: $base-padding * 3.7 $base-padding * 3.1 $base-padding * 0.8;
+      background: $color-white;
+      border-radius: 20px;
+      box-shadow: none;
+      z-index: 100;
+      margin-bottom: $base-margin * 1.9;
+      @include media-breakpoint-down-sm {
+        padding: $base-padding * 2.5 $base-padding * 1;
+      }
+      &:hover {
+        background: $color-secondary;
+        box-shadow: 0px 40px 60px rgba(189, 189, 189, 0.25);
+      }
+      &-title {
+        font-size: $base-font-size * 1.6;
+        line-height: 32.5px;
+        margin-bottom: $base-margin * 1.9;
+        padding-right: $base-padding * 9;
+        font-weight: 600;
+      }
+      &-body {
+        padding: 0;
+        margin-bottom: $base-margin * 3;
+        .card-text {
+          font-size: $base-font-size * 1.24;
+          color: $color-black;
+          font-weight: $semibold-font-weight;
+          line-height: 35px;
+        }
+      }
+    }
+  }
+  // start faq-two section
+  &-two {
+    padding-bottom: $base-padding * 9.4;
+    background: #fff4f2;
+    .section-header {
+      padding-bottom: $base-padding * 4.4;
+    }
+    .shows {
+      border: 1px solid #ffba08;
+    }
+  }
+  //
+  .hidden {
+    display: none;
+  }
+  .link {
+    .btn {
+      font-size: 0.875rem;
+      font-weight: $medium-font-weight;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+  }
+}

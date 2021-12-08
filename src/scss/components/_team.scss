@@ -1,0 +1,31 @@
+/********** 
+ 29. Team Section 
+**********/
+.team {
+  padding: $base-padding * 3 $base-padding * 0 $base-padding * 9.4;
+  .section-header {
+    padding-bottom: $base-padding * 3.5;
+  }
+  &-member {
+    margin-bottom: $base-margin * 3.1;
+    &-thumb {
+      margin-bottom: $base-margin * 1.5;
+      img {
+        width: 100%;
+      }
+    }
+    &-details {
+      h3 {
+        font-size: $base-font-size * 1.6;
+        color: $color-black;
+        margin-bottom: $base-margin * 0.3;
+        font-weight: 600;
+      }
+      p {
+        font-size: $base-font-size * 1.25;
+        color: #4d4d4d;
+        font-family: $font-primary;
+      }
+    }
+  }
+}

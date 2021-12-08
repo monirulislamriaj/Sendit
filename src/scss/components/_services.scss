@@ -1,0 +1,187 @@
+.services {
+  padding-bottom: $base-padding * 4.5;
+  @include media-breakpoint-down-xl {
+    padding-bottom: $base-padding * 1;
+  }
+  @include media-breakpoint-down-sm {
+    padding-bottom: $base-padding * 6.3;
+  }
+  .section-header {
+    @include media-breakpoint-down-sm {
+      padding: $base-padding * 6 0 $base-padding * 1.5;
+    }
+    h2 {
+      width: 80%;
+      margin: 0 auto $base-margin * 1.5;
+      @include media-breakpoint-down-xl {
+        width: 100%;
+      }
+      @include media-breakpoint-down-sm {
+        margin: 0 auto $base-margin * 0.6;
+      }
+    }
+  }
+  .card {
+    margin-bottom: $base-margin * 5;
+    @include media-breakpoint-down-lg {
+      text-align: center;
+    }
+
+    @include media-breakpoint-down-md {
+      margin-bottom: $base-margin * 3.2;
+    }
+    @include media-breakpoint-down-sm {
+      text-align: left;
+    }
+    &-icon {
+      margin-bottom: $base-margin * 3.1;
+      @include media-breakpoint-down-sm {
+        margin-bottom: $base-margin * 1.9;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+    &-body {
+      padding: 0;
+    }
+    &-title {
+      color: $color-text;
+      margin-bottom: $base-margin * 1;
+      font-size: $base-font-size * 1.6;
+      font-weight: $semibold-font-weight;
+    }
+    &-text {
+      font-size: 18px;
+      line-height: 29.7px;
+      letter-spacing: -0.008px;
+      font-weight: 500;
+      color: #4d4d4d;
+      @include media-breakpoint-down-md {
+        padding: 0 $base-padding * 5;
+      }
+      @include media-breakpoint-down-sm {
+        padding: 0;
+      }
+    }
+  }
+  .same-card {
+    padding: $base-padding * 3.8 $base-padding * 5 $base-padding * 3
+      $base-padding * 5;
+    @include media-breakpoint-down-xl {
+      padding: $base-padding * 3;
+    }
+    @include media-breakpoint-down-lg {
+      margin-bottom: 0;
+    }
+    @include media-breakpoint-down-sm {
+      padding: $base-padding * 0;
+    }
+    .card-title {
+      font-weight: $bold-font-weight;
+      font-size: $base-font-size * 2.8;
+      margin-bottom: $base-margin * 4.4;
+      line-height: 52.5px;
+    }
+  }
+
+  &-two {
+    background: #fff4f2;
+    position: relative;
+    padding: $base-padding * 9.4 0 $base-padding * 8.1;
+    .navbar {
+      background-color: white;
+      position: sticky;
+      top: 150px;
+      padding: 0;
+      border-radius: 20px;
+      z-index: 1;
+    }
+    .nav-pills .nav-link.active,
+    .nav-pills .show > .nav-link {
+      background: none;
+      color: $color-black;
+      &::after {
+        background: red;
+      }
+    }
+
+    &-nav {
+      display: block;
+      // margin-bottom: $base-padding * 12.5;
+      background-color: none;
+      .nav-pills {
+        display: block;
+        padding: $base-padding * 4.4 $base-padding * 4;
+        .nav-item {
+          padding-bottom: 80px;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            background: #e6ebf4;
+            width: 2px;
+            height: 120px;
+            border-radius: 0;
+            top: 0;
+            left: -16px;
+            transform: translateY(11%);
+          }
+          &:last-child {
+            padding-bottom: 0px;
+            &::before {
+              display: none;
+            }
+          }
+          a {
+            font-size: 26px;
+            position: relative;
+            color: #4d4d4d;
+            font-family: $font-primary;
+            font-weight: 600;
+            margin-bottom: 0px;
+            padding: 0;
+            &::after {
+              position: absolute;
+              content: "";
+              background: black;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              top: 50%;
+              left: -5%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }
+    }
+
+    // start services-two-items
+    &-items {
+      .card {
+        background: none;
+        padding: 0;
+        margin-bottom: $base-margin * 5;
+        // opacity: 0.5;
+        h3 {
+          color: #4d4d4d;
+          font-size: 45px;
+          margin-bottom: 24px;
+        }
+        &-body {
+          padding: 0;
+          .card-text {
+            margin-bottom: 50px;
+          }
+          .card-banner {
+            margin-bottom: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+/********** 
+ Services
+**********/

@@ -1,0 +1,112 @@
+/********** 
+ 19. Contact Form Page Styles
+**********/
+.contact {
+  padding-bottom: $base-padding * 9.4;
+  &-hero {
+    background: #f7f8fa;
+    padding: $base-padding * 17.4 0 $base-padding * 9.6;
+    &-content {
+      h1 {
+        font-size: $base-font-size * 4;
+
+        margin-bottom: $base-margin * 1.5;
+      }
+      p {
+        font-size: $base-font-size * 1.4;
+        color: #4d4d4d;
+        font-weight: 500;
+        line-height: 36.3px;
+        width: 80%;
+      }
+    }
+  }
+  &-form-Information {
+    .address {
+      padding-top: $base-padding * 5;
+      h3 {
+        font-size: $base-font-size * 1.6;
+        font-weight: 600;
+        margin-bottom: $base-margin * 0.8;
+      }
+      p {
+        font-size: $base-font-size * 1.25;
+        color: #4d4d4d;
+        margin-bottom: $base-margin * 2.6;
+      }
+      .item {
+        background: #f7f8fa;
+        border-radius: 10px;
+        padding: $base-padding * 0.9 $base-padding * 1.25;
+        h3 {
+          font-size: $base-font-size * 0.8;
+          font-weight: 300;
+          color: #4d4d4d;
+          margin-bottom: $base-margin * 0.3;
+        }
+        a {
+          display: flex;
+          justify-content: space-between;
+          font-size: $base-font-size * 1.25;
+          color: $color-black;
+          font-family: $font-secondary;
+          font-weight: 700;
+          span {
+            margin-bottom: $base-margin * 0.7;
+          }
+        }
+      }
+    }
+  }
+  &-form {
+    position: relative;
+    z-index: 1;
+    form {
+      border: 1px solid #f7f8fa;
+      box-shadow: 0px 0px 80px rgba(150, 0, 0, 0.06);
+      border-radius: 20px;
+      z-index: 1;
+      margin-top: -$base-margin * 28.2;
+      padding: $base-padding * 4.2 $base-padding * 3.3 $base-padding * 3.1;
+      background: #ffffff;
+      h3 {
+        font-size: $base-font-size * 1.9;
+        margin-bottom: $base-margin * 3;
+      }
+      .label {
+        margin-bottom: $base-margin * 0.8;
+        font-weight: 600;
+        color: #282828;
+      }
+      .form-control {
+        padding: 19px 20px;
+        font-size: $base-font-size * 0.9;
+        font-weight: 600;
+        color: $color-black;
+        background: #f7f8fa;
+        border: 1px solid #dddddd;
+        border-radius: 10px;
+        margin-bottom: $base-margin * 1.9;
+
+        &:focus {
+          background: #fff7e1;
+          border: 1px solid #ffba08;
+          outline: 0;
+          box-shadow: none;
+        }
+      }
+      textarea {
+        resize: none;
+      }
+      ::placeholder {
+        color: #808080;
+      }
+    }
+    .effect {
+      position: absolute;
+      top: -10%;
+      left: -14%;
+      z-index: -1;
+    }
+  }
+}

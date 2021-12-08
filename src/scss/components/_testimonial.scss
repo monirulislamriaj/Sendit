@@ -1,0 +1,329 @@
+/********** 
+  11. Testimonial Section Styles 
+**********/
+.testimonial {
+  background: $color-black;
+  position: relative;
+  border-bottom: 1px solid #282828;
+  overflow: hidden;
+  &-content {
+    padding-right: 50px;
+    @include media-breakpoint-down-xl {
+      padding-right: 0;
+    }
+    @include media-breakpoint-down-lg {
+      text-align: center;
+      padding-bottom: $base-padding * 3;
+    }
+    h2 {
+      color: $color-white;
+      font-size: $base-font-size * 2.8;
+      margin-bottom: $base-margin * 1.4;
+      span {
+        color: #ffba08;
+      }
+      @include media-breakpoint-down-xl {
+        font-size: $base-font-size * 2.5;
+      }
+      @include media-breakpoint-down-sm {
+        font-size: $base-font-size * 2;
+      }
+    }
+    p {
+      font-size: 22px;
+      color: #f3f3f3;
+      font-weight: 500;
+      line-height: 36.3px;
+      letter-spacing: -0.4px;
+      @include media-breakpoint-down-md {
+        font-size: $base-font-size * 1.25;
+      }
+    }
+  }
+  .slider-wrapper {
+    position: relative;
+    @include media-breakpoint-down-lg {
+      margin-left: $base-margin * 1.25;
+    }
+    .shape {
+      position: absolute;
+      top: -5%;
+      right: 10%;
+      z-index: 99;
+      @include media-breakpoint-down-sm {
+        top: -9%;
+      }
+    }
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      height: 90%;
+      width: 100%;
+      background-color: #5f5f5f;
+      opacity: 0.9;
+      border-radius: 50px;
+      transform: translate(-5%, -50%);
+      top: 50%;
+      left: 1%;
+      z-index: 0;
+      box-shadow: 0px 70px 90px rgba(0, 0, 0, 0.09);
+      @include media-breakpoint-down-lg {
+        width: 100%;
+        left: 3%;
+      }
+      @include media-breakpoint-down-md {
+        width: 100%;
+        left: 2%;
+      }
+    }
+    &::before {
+      height: 80%;
+      left: -2%;
+      background-color: #262626;
+      opacity: 0.5;
+      z-index: 0;
+      @include media-breakpoint-down-lg {
+        background-color: #5f5f5f;
+        height: 70%;
+        left: 1%;
+      }
+      @include media-breakpoint-down-md {
+        height: 78%;
+        left: -1%;
+      }
+    }
+  }
+  &-slider {
+    position: relative;
+    z-index: 1;
+    background: $color-white;
+    border-radius: 30px;
+    &-item {
+      position: relative;
+      padding: $base-padding * 5 $base-padding * 3.2 $base-padding * 4.7;
+      outline: 0 !important;
+      transition: 0.5s ease;
+
+      @include media-breakpoint-down-xl {
+        padding: $base-padding * 4 $base-padding * 2 $base-padding * 3;
+      }
+      @include media-breakpoint-down-lg {
+        padding: $base-padding * 3 $base-padding * 1.6;
+      }
+      @include media-breakpoint-down-sm {
+        padding: $base-padding * 3 $base-padding * 1.6 $base-padding * 2;
+      }
+      p {
+        font-size: $base-font-size * 1.4;
+        color: $color-text-light;
+        line-height: 41.25px;
+        font-weight: 500;
+        @include media-breakpoint-down-sm {
+          font-size: $base-font-size * 0.9;
+          line-height: 23.1px;
+        }
+      }
+    }
+    &-person {
+      display: flex;
+      align-items: center;
+      margin-bottom: $base-margin * 2.5;
+      @include media-breakpoint-down-xl {
+        margin-bottom: $base-margin * 1.5;
+      }
+      @include media-breakpoint-down-sm {
+        margin-bottom: $base-margin * 1.25;
+      }
+
+      .thumb {
+        width: 86px;
+        height: 86px;
+        line-height: 86px;
+        border-radius: 50%;
+        overflow: hidden;
+        @include media-breakpoint-down-sm {
+          width: 46px;
+          height: 46px;
+          line-height: 46px;
+        }
+        img {
+          width: 100%;
+        }
+        // @include media-breakpoint-down-sm {
+        //   margin: 0 auto;
+        // }
+      }
+
+      .content {
+        margin-left: 20px;
+        // @include media-breakpoint-down-sm {
+        //   margin-left: 0;
+        // }
+        h3 {
+          font-size: 30px;
+          margin-bottom: 4px;
+          line-height: 37.5px;
+          @include media-breakpoint-down-sm {
+            font-size: $base-font-size * 1;
+            line-height: 20px;
+            margin-bottom: 2.5px;
+          }
+        }
+
+        p {
+          font-size: 20px;
+          font-weight: 400;
+          color: $color-text;
+          margin: 0;
+          font-family: $font-primary;
+          @include media-breakpoint-down-sm {
+            font-size: $base-font-size * 0.6;
+            line-height: 14.5px;
+          }
+        }
+      }
+    }
+
+    .slick-prev {
+      left: -24%;
+      display: none !important;
+    }
+    .slick-next {
+      right: -14%;
+      @include media-breakpoint-down-xxl {
+        right: 50%;
+        transform: translateX(50%);
+      }
+      @include media-breakpoint-down-sm {
+        display: none !important;
+      }
+    }
+    .slick-prev,
+    .slick-next {
+      width: 58px;
+      height: 58px;
+      padding: 0;
+      top: 50%;
+      z-index: 1;
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out;
+      @include media-breakpoint-down-xxl {
+        top: 104%;
+      }
+      span {
+        position: absolute;
+        top: 33%;
+        left: 37%;
+        svg {
+          border: none;
+          path {
+            stroke: #ffba08;
+          }
+        }
+      }
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid #282828;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+        circle {
+          stroke-dasharray: 170;
+          stroke-dashoffset: 170;
+          stroke: #ffba08;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      &:hover {
+        svg {
+          circle {
+            animation: dash 1s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+          }
+        }
+      }
+    }
+    .slick-next:before,
+    .slick-prev:before {
+      display: none;
+    }
+  }
+
+  // @keyframes animation {
+  //   from {
+  //     opacity: 0;
+  //     transform: scale(1.2) rotateX(45deg);
+  //   }
+  //   to {
+  //   }
+  // }
+
+  // @keyframes animation2 {
+  //   from {
+  //     opacity: 0;
+  //     transform: scale(1.2) rotateX(45deg);
+  //   }
+  //   to {
+  //   }
+  // }
+  // .slider {
+  //   animation-delay: 0.8s;
+  //   animation-fill-mode: backwards;
+  //   height: 500px;
+  //   perspective: 1000px;
+  //   transition: ease-in-out 0.2s;
+  //   .slide {
+  //     user-select: none;
+  //     position: absolute;
+  //     box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
+  //     background: #fcfcfc;
+  //     transform-style: preserve-3d;
+  //     box-sizing: border-box;
+  //     border-radius: 30px;
+  //   }
+  //   .testimonial-slider-item {
+  //     position: relative;
+  //     padding: 80px 50px 74px;
+  //     .shape {
+  //       position: absolute;
+  //       top: -5%;
+  //       right: 9%;
+  //     }
+  //     .testimonial-slider-person {
+  //       display: flex;
+  //       margin-bottom: 40px;
+  //       .thumb {
+  //         margin-right: 30px;
+  //       }
+  //       .content {
+  //         h3 {
+  //           font-size: 30px;
+  //           line-height: 37.5px;
+  //           margin-bottom: 4px;
+  //         }
+  //         p {
+  //           font-size: 20px;
+  //           color: #282828;
+  //           font-family: $font-primary;
+  //           font-weight: 400;
+  //         }
+  //       }
+  //     }
+  //     p {
+  //       font-size: 25px;
+  //       font-weight: 500;
+  //       line-height: 41.25px;
+  //       letter-spacing: -0.4px;
+  //     }
+  //   }
+  // }
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: 170;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

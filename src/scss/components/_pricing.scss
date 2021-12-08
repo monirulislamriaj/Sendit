@@ -1,0 +1,311 @@
+/********** 
+  13. Pricing Page and Section Styles
+**********/
+.pricing,
+.pricing-two {
+  position: relative;
+  margin-top: -$base-margin * 21.5;
+  .card {
+    transition: all 0.3s ease-in-out;
+    padding: $base-padding * 3.9 $base-padding * 0 $base-padding * 3.7;
+    background: $color-white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 80px rgba(150, 0, 0, 0.06);
+    z-index: 10;
+    border: 1px solid white;
+
+    .card-title {
+      font-size: $base-font-size * 1.9;
+      font-weight: 700;
+      color: $color-text;
+      margin-bottom: 8px;
+      line-height: 37.5px;
+      padding-left: $base-padding * 2.9;
+      transition: all 0.3s ease-in-out;
+    }
+    .card-text {
+      font-size: $base-font-size * 1.25;
+      line-height: 29px;
+      margin-bottom: $base-margin * 1.5;
+      letter-spacing: -0.5px;
+      font-weight: 400;
+      font-family: $font-primary;
+      padding-left: $base-padding * 2.9;
+    }
+    .price {
+      display: flex;
+      position: relative;
+      margin-bottom: $base-margin * 3.1;
+      transition: all 0.4s ease-in-out;
+      color: $color-black;
+      border-top: 1px solid #ffebb5;
+      border-bottom: 1px solid #ffebb5;
+      p {
+        margin-bottom: 0;
+        padding-left: $base-padding * 2.9;
+        font-size: $base-font-size * 2.8;
+        font-family: $font-primary;
+        font-weight: 700;
+        transition: all 0.4s ease-in-out;
+        z-index: 2;
+        margin-right: $base-margin * 0.8;
+        color: #000;
+      }
+      .discount {
+        position: relative;
+        display: flex;
+        align-items: center;
+        p {
+          margin: 0;
+          padding: 0;
+          font-size: $base-font-size * 1.6;
+          font-family: $font-primary;
+          font-weight: 600;
+          transition: all 0.4s ease-in-out;
+          z-index: 2;
+          color: #4d4d4d;
+        }
+        .vector,
+        vector-one {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        .vector-one {
+          left: 58%;
+        }
+      }
+      .shape {
+        position: absolute;
+        top: 10px;
+        z-index: -1;
+        left: 10%;
+      }
+    }
+    &-body {
+      padding: $base-padding * 0 $base-padding * 2.9;
+      ul {
+        margin-bottom: $base-margin * 4.5;
+        li {
+          display: flex;
+          align-items: center;
+          color: #4d4d4d;
+          font-size: $base-font-size * 1.25;
+          line-height: 33px;
+          margin-bottom: $base-margin * 1.9;
+          font-weight: 700;
+          letter-spacing: -0.4px;
+          font-family: $font-secondary;
+          i {
+            margin-right: $base-margin * 1.1;
+            color: #e53b2a;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        .deactive {
+          color: #ababab;
+        }
+      }
+    }
+  }
+  .active {
+    border: 1px solid $color-primary;
+    .card-title {
+      color: $color-primary;
+    }
+    .link {
+      a {
+        color: $color-white;
+        background: $color-primary;
+      }
+    }
+  }
+  /* Pricing in Inner Page section */
+  &-inner {
+    position: relative;
+    padding: $base-padding * 14 $base-padding * 0 $base-padding * 27;
+    .section-header {
+      padding: 0 0 $base-padding * 1;
+      h2 {
+        font-size: $base-font-size * 4;
+        line-height: 80px;
+        margin-bottom: $base-margin * 1.5;
+      }
+      p {
+        font-size: $base-font-size * 1.35;
+      }
+    }
+  }
+  /* Pricing-two section */
+  &-two {
+    padding: $base-padding * 3 0 $base-padding * 9.4;
+    margin-top: 0;
+    &-range {
+      position: relative;
+      background: $color-white;
+      border: 1px solid rgba(229, 59, 42, 0.3);
+      padding: 60px 90px 40px;
+      text-align: center;
+      border-radius: 34px;
+      margin-top: -26rem;
+      margin-bottom: $base-margin * 6.3;
+      box-shadow: 0px 0px 80px rgba(150, 0, 0, 0.06);
+      h3 {
+        color: #4d4d4d;
+        font-size: 30px;
+        line-height: 37.5px;
+        margin-bottom: $base-margin * 6.3;
+      }
+      .pricingbuttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0 0;
+        .pricingbtn {
+          background: transparent;
+          display: inline-block;
+          padding: 15px 30px;
+          border-radius: 14px;
+          color: #545454;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-family: Arial;
+          margin: 0 10px;
+          border: 1px solid rgba(229, 59, 42, 0.3);
+        }
+        .active {
+          background: $color-primary;
+          color: #fff;
+        }
+      }
+
+      .pricingtable,
+      .pricingtable-two {
+        margin: 30px 0;
+        background: #ededed;
+        display: block;
+        color: #545454;
+        font-size: 75px;
+        padding: 10px 50px;
+      }
+      .employeenoinfo {
+        border-bottom: 1px solid #ffe1dd;
+        padding-bottom: 84px;
+        .employeenocont-one,
+        .employeenocont-two {
+          position: absolute;
+          top: 39%;
+          left: 10%;
+          font-size: 45px;
+          font-family: $font-primary;
+          font-weight: 700;
+          color: #e53b2a;
+        }
+        .employeenocont-two {
+          left: 79%;
+        }
+      }
+
+      .priceslider.ui-widget.ui-widget-content {
+        border: 4px solid #ffe1dd;
+        background: #ffe1dd;
+        height: 1px;
+        width: 68%;
+        margin-left: 90px;
+      }
+      .ui-state-default,
+      .ui-widget-content .ui-state-default,
+      .ui-widget-header .ui-state-default,
+      .ui-button,
+      html .ui-button.ui-state-disabled:hover,
+      html .ui-button.ui-state-disabled:active {
+        border: 1 px solid #e53b2a;
+        background: #f6f6f6;
+        font-weight: normal;
+        color: #454545;
+        border-radius: 50px;
+        background: #e53b2a;
+        width: 30px;
+        height: 30px;
+        top: -16px;
+        left: 50%;
+      }
+
+      .ui-state-default,
+      .ui-widget-content .ui-state-default,
+      .ui-widget-header .ui-state-default,
+      .ui-button,
+      html .ui-button.ui-state-disabled:hover,
+      html .ui-button.ui-state-disabled:focus {
+        border: 1 px solid #e53b2a;
+      }
+    }
+    .card {
+      margin-bottom: $base-margin * 6.2;
+    }
+    /* Pricing-two gig section */
+    &-gig {
+      padding: $base-padding * 3.8 $base-padding * 4.5;
+      box-shadow: 0px 0px 80px rgba(150, 0, 0, 0.06);
+      border-radius: 20px;
+      .table {
+        thead {
+          tr {
+            border: none;
+            th {
+              p {
+                font-size: $base-font-size * 1.6;
+                font-family: $font-primary;
+                font-weight: 600;
+                text-align: center;
+                margin-bottom: 0;
+              }
+              span {
+                font-family: $font-primary;
+                font-weight: 600;
+                color: #e53b2a;
+                display: block;
+                font-size: $base-font-size * 1.6;
+                text-align: center;
+              }
+              &:first-child {
+                p {
+                  font-size: $base-font-size * 1.9;
+                  text-align: left;
+                  margin-bottom: 42px;
+                }
+              }
+            }
+          }
+        }
+        tbody {
+          tr {
+            th {
+              padding: 50px 0 20px;
+              font-size: $base-font-size * 1.25;
+              font-family: $font-primary;
+              font-weight: 600;
+            }
+            td {
+              i {
+                color: #e53b2a;
+                display: block;
+                padding: 50px 0 20px;
+                text-align: center;
+              }
+              .deactive {
+                color: #ffe1dd;
+              }
+            }
+          }
+        }
+      }
+      .table > :not(:last-child) > :last-child > * {
+        border: none;
+      }
+    }
+  }
+}

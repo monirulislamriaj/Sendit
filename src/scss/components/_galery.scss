@@ -1,0 +1,22 @@
+.galery {
+  padding-bottom: $base-padding * 9.3;
+  &-items {
+    display: flex;
+    margin-bottom: $base-margin * 5;
+    &-item {
+      .item {
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  &-content {
+    p {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 36.3px;
+      margin-bottom: 0;
+    }
+  }
+}

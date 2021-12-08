@@ -1,0 +1,174 @@
+/********** 
+  8. About Page and Section Styles
+**********/
+.about {
+  &-hero-one {
+    padding: $base-padding * 4.5 0 $base-padding * 29;
+    background: #f7f8fa;
+  }
+  &-hero-two {
+    padding: $base-padding * 9 0 $base-padding * 3;
+    background: #f7f8fa;
+    &-content {
+      padding: $base-padding * 9.4 0 $base-padding * 4.1;
+      h2 {
+        position: relative;
+        font-size: $base-font-size * 4;
+        line-height: 81.25px;
+        letter-spacing: -0.4px;
+        margin-bottom: $base-margin * 1.5;
+      }
+      p {
+        font-size: $base-font-size * 1.4;
+        color: $color-text-light;
+        font-weight: $medium-font-weight;
+        line-height: 36.3px;
+        letter-spacing: -0.4px;
+        margin-bottom: $base-margin * 9;
+      }
+      .scroll-down {
+        a {
+          font-size: 20px;
+          color: #4d4d4d;
+          svg {
+            margin-left: 13px;
+            path {
+              stroke: #4d4d4d;
+            }
+          }
+        }
+      }
+    }
+    &-banner {
+      position: relative;
+      .image-one,
+      .image-two,
+      .image-three {
+        position: absolute;
+        border-radius: 20px;
+        top: 0%;
+        z-index: 1;
+        &::after {
+          position: absolute;
+          content: "";
+          background: #e53b2a;
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+          top: 0;
+          left: 0;
+          opacity: 0.2;
+        }
+      }
+      .image-one {
+        right: 0%;
+      }
+      .image-two {
+        left: 15%;
+        top: 286px;
+      }
+      .image-three {
+        left: 8%;
+        top: 30px;
+      }
+      .pattern,
+      .pattern-two {
+        position: absolute;
+        top: 0;
+        left: -20px;
+      }
+      .pattern-two {
+        top: 570px;
+        left: 82%;
+        z-index: 1;
+      }
+    }
+  }
+  &-feature {
+    margin-top: -$base-margin * 28.4;
+    // padding-bottom: $base-padding * 9.4;
+    position: relative;
+    .feature-image {
+      position: relative;
+      text-align: center;
+      padding-bottom: $base-padding * 9.4;
+      z-index: 2;
+      .pattern {
+        position: absolute;
+        top: -12%;
+        left: -1%;
+        z-index: -1;
+      }
+    }
+    .content {
+      text-align: center;
+      padding: 0 $base-padding * 4;
+      p {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 36.3px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .card {
+    transition: all 0.4s ease-in-out;
+    text-align: center;
+    padding: $base-padding * 5 $base-padding * 3.75 $base-padding * 5;
+    border-radius: 10px;
+    box-shadow: none;
+    z-index: 100;
+    overflow: hidden;
+    @include media-breakpoint-down-xl {
+      padding: $base-padding * 5 $base-padding * 2 $base-padding * 5;
+    }
+
+    &:hover {
+      box-shadow: 0px 40px 60px rgba(189, 189, 189, 0.25);
+      border-radius: 10px;
+      background: #fdfdfd;
+
+      &::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    }
+    &-icon {
+      margin-bottom: $base-margin * 2.7;
+      img {
+        min-height: 100px;
+      }
+    }
+    &-body {
+      padding: 0;
+      h4.card-title {
+        margin-bottom: $base-margin * 1.4;
+        font-weight: $bold-font-weight;
+        font-size: $base-font-size * 1.625;
+      }
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 3px;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      transform: scaleX(0);
+      transition: $base-transition;
+      transform-origin: right;
+      background: $color-primary;
+      display: none;
+    }
+    &.active {
+      @include media-breakpoint-down-lg {
+        box-shadow: 0px 0px 60px rgba(189, 189, 189, 0.25);
+      }
+    }
+    &.about-item {
+      margin-bottom: $base-margin * 2;
+    }
+  }
+}

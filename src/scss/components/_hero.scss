@@ -1,0 +1,343 @@
+/********** 
+ 6. Hero Section Styles
+**********/
+.hero,
+.hero-two {
+  background: $color-secondary;
+  padding: $base-padding * 13.8 0 $base-padding * 0;
+  overflow: hidden;
+  @include media-breakpoint-down-xxl {
+    padding: $base-padding * 10 0 $base-padding * 0;
+  }
+  @include media-breakpoint-down-sm {
+    padding: $base-padding * 9 0 $base-padding * 0;
+  }
+  &-content {
+    position: relative;
+    padding-bottom: $base-padding * 5.7;
+    z-index: 9;
+    @include media-breakpoint-down-xl {
+      padding-bottom: $base-padding * 3;
+    }
+    @include media-breakpoint-down-lg {
+      padding-bottom: $base-padding * 1.5;
+    }
+    h1 {
+      position: relative;
+      @include media-breakpoint-down-xxl {
+        font-size: $base-font-size * 3.5;
+      }
+      @include media-breakpoint-down-xxl {
+        font-size: $base-font-size * 3.5;
+      }
+      @include media-breakpoint-down-lg {
+        font-size: $base-font-size * 3.2;
+        line-height: 65px;
+      }
+      @include media-breakpoint-down-md {
+        // font-size: $base-font-size * 2.5;
+        line-height: 55px;
+      }
+      @include media-breakpoint-down-sm {
+        font-size: $base-font-size * 2.5;
+        line-height: 50px;
+      }
+    }
+  }
+  &-banner {
+    position: relative;
+    max-width: 1478px;
+    margin: 0 auto;
+    z-index: 1;
+    text-align: center;
+    @include media-breakpoint-down-xxl {
+      max-width: 990px;
+    }
+    @include media-breakpoint-down-xl {
+      max-width: 820px;
+    }
+    @include media-breakpoint-down-lg {
+      max-width: 600px;
+    }
+    @include media-breakpoint-down-md {
+      max-width: 500px;
+    }
+    @include media-breakpoint-down-sm {
+      max-width: 300px;
+    }
+    img {
+      border-radius: 20px 20px 0px 0px;
+      @include media-breakpoint-down-xxl {
+        max-width: 100%;
+      }
+    }
+    &-shape {
+      position: absolute;
+      top: -35%;
+      left: -9%;
+      z-index: -1;
+      @include media-breakpoint-down-xxl {
+        left: -15%;
+      }
+    }
+  }
+  &-two {
+    position: relative;
+    background: #fff4f2;
+    padding: $base-padding * 11.3 0 $base-padding * 5;
+    z-index: 1;
+    overflow: hidden;
+    @include media-breakpoint-down-xl {
+      padding: $base-padding * 11.3 0 $base-padding * 2;
+    }
+    @include media-breakpoint-down-lg {
+      padding: $base-padding * 11.3 0 $base-padding * 5;
+    }
+    &-shape {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    &-content {
+      padding-left: $base-padding * 18;
+      @include media-breakpoint-down-xxl {
+        padding-left: $base-padding * 5;
+      }
+      @include media-breakpoint-down-lg {
+        padding: 0 $base-padding * 4 $base-padding * 6;
+        text-align: center;
+      }
+      @include media-breakpoint-down-md {
+        padding: 0 $base-padding * 3 $base-padding * 6;
+      }
+      @include media-breakpoint-down-sm {
+        padding: 0 $base-padding * 0 $base-padding * 6;
+      }
+      h1 {
+        line-height: 80px;
+        @include media-breakpoint-down-xxl {
+          font-size: $base-font-size * 3;
+          line-height: 60px;
+        }
+        @include media-breakpoint-down-xl {
+          font-size: $base-font-size * 2.7;
+          line-height: 60px;
+        }
+        @include media-breakpoint-down-lg {
+          font-size: $base-font-size * 4;
+          line-height: 80px;
+        }
+        @include media-breakpoint-down-md {
+          font-size: $base-font-size * 3;
+          line-height: 60px;
+        }
+        @include media-breakpoint-down-sm {
+          font-size: $base-font-size * 2.5;
+          line-height: 50px;
+        }
+      }
+      p {
+        font-size: $base-padding * 1.4;
+      }
+    }
+    &-banner {
+      position: relative;
+      text-align: right;
+      max-width: 100%;
+      margin-right: -13px;
+
+      z-index: 1;
+      &-shape {
+        position: absolute;
+        top: -26%;
+        left: 3%;
+        z-index: -1;
+        @include media-breakpoint-down-lg {
+          top: -27%;
+          left: -22%;
+        }
+      }
+    }
+  }
+}
+
+/* Hero inner pages Styles */
+
+.hero-inner {
+  overflow: hidden;
+  .shapes {
+    @include media-breakpoint-down-md {
+      display: none;
+    }
+    &-item-1 {
+      position: absolute;
+      left: 20%;
+      top: -20px;
+    }
+    &-item-2 {
+      position: absolute;
+      right: 24%;
+      top: -30px;
+    }
+    &-item-3 {
+      position: absolute;
+      right: 13%;
+      bottom: 50%;
+    }
+    &-item-4 {
+      position: absolute;
+      left: 25%;
+      bottom: -5px;
+    }
+    &-item-5 {
+      position: absolute;
+      left: 15%;
+      bottom: -65px;
+    }
+    &-item-6 {
+      position: absolute;
+      right: 19%;
+      bottom: -40px;
+    }
+  }
+  &-title {
+    font-size: $base-font-size * 3.125;
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+}
+.login-hero {
+  .shapes-item-3 {
+    bottom: 15%;
+  }
+  .shapes-item-4 {
+    display: none;
+  }
+  .shapes-item-5 {
+    display: none;
+  }
+  .shapes-item-6 {
+    display: none;
+  }
+}
+/* Blog Hero pages Styles */
+.blog-hero {
+  .shapes-item-1 {
+    left: 22%;
+    top: -40px;
+  }
+  .shapes-item-2 {
+    right: 28%;
+    top: -65px;
+  }
+  .shapes-item-3 {
+    right: 20%;
+    bottom: 9%;
+  }
+  .shapes-item-4 {
+    left: 13%;
+    bottom: 0;
+  }
+  .shapes-item-6 {
+    right: 18.5%;
+    bottom: 30px;
+  }
+  .hero-inner-title-shape {
+    svg {
+      margin-left: 230px;
+      margin-top: -10px;
+      @include media-breakpoint-down-lg {
+        margin-left: 0;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+/* Comapny Page Hero Secion */
+.company-hero {
+  .hero-inner-title-shape svg {
+    margin-left: 375px;
+    @include media-breakpoint-down-md {
+      margin-left: 0;
+    }
+  }
+  .shapes-item-4 {
+    bottom: 65px;
+  }
+  .shapes-item-5 {
+    bottom: 0;
+  }
+  .shapes-item-6 {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 574.98px) and (min-width: 500px) {
+  .hero-content .hero-content-shape .shape-one {
+    transform: translate(-50%, -75px);
+  }
+}
+/* Keyframes for hero pages */
+@keyframes grow {
+  0% {
+    transform: scale(0.9) translate(-50%, -50%);
+  }
+
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+@keyframes up-down-animation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes up-down-rev-animation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+@keyframes left-right-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes right-left-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+@keyframes scale-animation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

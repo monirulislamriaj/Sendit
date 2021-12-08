@@ -1,0 +1,262 @@
+/********** 
+ 16. Blog Page and Section Styles
+**********/
+.blog {
+  margin-top: -$base-margin * 22.5;
+  // start block hero section
+  &-hero {
+    background: #fffbf3;
+    text-align: center;
+    h1 {
+      margin-bottom: $base-margin * 1.5;
+    }
+    p {
+      font-size: $base-font-size * 1.4;
+      line-height: 36.3px;
+      font-weight: 500;
+    }
+  }
+  .section-header {
+    @include media-breakpoint-down-md {
+      padding: $base-padding * 4 0 $base-padding * 4.1;
+    }
+  }
+  // start block section
+  &-post {
+    margin-bottom: $base-margin * 3.2;
+    &-thumb {
+      border-radius: 20px;
+      margin-bottom: $base-margin * 1.9;
+      overflow: hidden;
+      img {
+        transform: scale(1) rotate(0deg);
+        border-radius: 20px;
+        width: 100%;
+        transition: 0.5s ease-in-out;
+      }
+    }
+    &-tag {
+      a {
+        background: #ffe1dd;
+        border-radius: 6px;
+        padding: 4px 10px;
+        text-decoration: none;
+        font-size: 12px;
+        color: #e53b2a;
+        font-weight: 300;
+        margin-bottom: $base-margin * 0.9;
+        font-family: $font-primary;
+      }
+    }
+    &-title {
+      a {
+        color: #282828;
+        font-size: 26px;
+        font-family: $font-primary;
+        font-weight: 600;
+        line-height: 32.5px;
+        text-decoration: none;
+        margin-bottom: $base-margin * 1.1;
+        display: block;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+    &-meta {
+      ul {
+        padding: 0;
+        margin-left: $base-margin * 1;
+        display: flex;
+        list-style: none;
+
+        li {
+          font-size: 13px;
+          position: relative;
+          color: #4d4d4d;
+          font-weight: 300;
+          &:last-child {
+            padding-left: $base-padding * 0.5;
+            margin-left: $base-margin * 1.5;
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            background: #4d4d4d;
+            border-radius: 50%;
+            width: 5px;
+            height: 5px;
+            top: 50%;
+            left: -7%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+    &:hover {
+      .blog-post-thumb {
+        img {
+          transform: scale(1.05) rotate(1.5deg);
+        }
+      }
+      .blog-post-title {
+        a {
+          color: #e53b2a;
+        }
+      }
+    }
+  }
+  &-two {
+    // padding-bottom: $base-padding * 12.5;
+    margin-top: 0;
+    .section-header {
+      padding-bottom: $base-padding * 3.5;
+      p {
+        width: 72%;
+        margin: 0 auto;
+      }
+    }
+  }
+  // start block details section
+  &-details {
+    position: relative;
+    padding: $base-padding * 14.4 0 $base-padding * 4.4;
+    article {
+      position: relative;
+      .inner-blog-details {
+        h2 {
+          font-size: $base-font-size * 2.8;
+          margin-bottom: $base-margin * 1.5;
+        }
+        &-meta {
+          margin-bottom: $base-margin * 1.9;
+          ul {
+            margin-bottom: 0;
+            li {
+              position: relative;
+              &:last-child {
+                padding-left: $base-padding * 0.4;
+                margin-left: $base-margin * 1.2;
+                &::after {
+                  position: absolute;
+                  content: "";
+                  background: #4d4d4d;
+                  width: 2px;
+                  height: 15px;
+                  top: 50%;
+                  left: -7%;
+                  transform: translate(-50%, -50%);
+                }
+              }
+
+              p {
+                font-size: $base-font-size;
+                color: #4d4d4d;
+                font-family: $font-primary;
+                font-weight: 600;
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+
+      h3 {
+        font-size: $base-font-size * 1.9;
+        margin-bottom: $base-margin * 1.5;
+        line-height: 43px;
+      }
+      p {
+        font-size: $base-font-size * 1.1;
+        margin-bottom: $base-margin * 5;
+        line-height: 29px;
+      }
+      .Frequently {
+        h3 {
+          margin-bottom: $base-margin * 3.6;
+        }
+        ul {
+          margin-bottom: 0;
+          li {
+            list-style: decimal;
+            &::marker {
+              font-size: $base-font-size * 1.6;
+            }
+            h4 {
+              font-size: $base-font-size * 1.6;
+              margin: 0 0 $base-margin * 1.25 $base-margin * 0.5;
+              font-weight: 600;
+            }
+            p {
+              margin-bottom: $base-margin * 3;
+              font-size: $base-font-size * 1.1;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+    .social-icon {
+      position: fixed;
+      z-index: 999;
+      top: 50%;
+      left: 2%;
+      .icon {
+        position: relative;
+        transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        margin-bottom: $base-margin;
+        display: inline-block;
+        z-index: 99;
+        svg {
+          path {
+            fill: #4d4d4d;
+          }
+        }
+        .tooltip {
+          position: absolute;
+          left: 20px;
+          font-size: 10px;
+          background: #ffe1dd;
+          color: #e53b2a;
+          padding: 7px 10px;
+          border-radius: 5px;
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+          opacity: 1;
+          visibility: hidden;
+          transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          width: max-content;
+          z-index: -1;
+          cursor: pointer;
+          &:before {
+            position: absolute;
+            content: "";
+            height: 8px;
+            width: 8px;
+            background: #ffe1dd;
+            top: 50%;
+            left: 0%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          }
+        }
+        &:hover {
+          svg {
+            path {
+              fill: red;
+            }
+          }
+          .tooltip {
+            left: 45px;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+  /* Related Blog Style */
+  &-related {
+    padding: $base-padding * 9.375 0 $base-padding * 0;
+    background: #fff4f2;
+    h2 {
+      margin-bottom: $base-margin * 3;
+    }
+  }
+}
