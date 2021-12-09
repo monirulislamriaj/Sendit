@@ -49,7 +49,7 @@ $(document).ready(function () {
   });
 
 
-  // $(".feature-two-items").matchHeight({
+  // $(".pricing-item").matchHeight({
   //   byRow: 0,
   // });
  
@@ -96,17 +96,6 @@ $(document).ready(function () {
     percentPosition: true
   });
   
-  $('.load-more').on( 'click', function() {
-    // create new item elements
-      var $items = $( ".hidden" ).removeClass( "hidden");
-      //append items to grid
-      $grid.append( $items )
-        // add and lay out newly appended items
-        .masonry( 'appended', $items );
-      //hide button on expanded mood
-    $(this).hide()
-  });
-
 // more blog lode
 $(function () {
   $("body").on('click touchstart', '.load-more', function (e) {

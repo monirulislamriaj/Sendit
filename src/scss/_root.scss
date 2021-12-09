@@ -213,6 +213,9 @@ a {
   @include media-breakpoint-down-xl {
     padding: $base-padding * 6 0 $base-padding * 4.1;
   }
+  @include media-breakpoint-down-sm {
+    padding: $base-padding * 3 0 $base-padding * 4.1;
+  }
   h2 {
     position: relative;
     font-size: $base-font-size * 4;
@@ -298,7 +301,7 @@ a {
   align-items: center;
   width: 100%;
   padding: 0;
-  font-size: 1.6rem;
+  font-size: $base-font-size * 1.6;
   color: #000;
   font-family: $font-primary;
   text-align: left;
@@ -310,6 +313,12 @@ a {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
     border-radius 0.15s ease;
+  @include media-breakpoint-down-lg {
+    font-size: $base-font-size * 1.25;
+  }
+  @include media-breakpoint-down-md {
+    font-size: $base-font-size * 1.1;
+  }
   span {
     display: flex;
     align-items: center;
@@ -322,6 +331,9 @@ a {
     margin-right: 30px;
     font-size: 20px;
     font-weight: 400;
+    @include media-breakpoint-down-md {
+      margin-right: 16px;
+    }
   }
   // &:focus{
   //   border: 1px solid #FFBA08;
@@ -380,6 +392,10 @@ a {
   margin-bottom: 40px;
   border: 1px solid #fff;
   padding: 24px 40px;
+  @include media-breakpoint-down-md {
+    margin-bottom: 20px;
+    padding: 24px 16px;
+  }
 }
 
 // .accordion-item:first-of-type {
@@ -404,10 +420,15 @@ a {
 // }
 
 .accordion-body {
-  padding: 1.6rem 30rem 0rem 0rem;
+  padding: $base-padding * 1.6 $base-padding * 30 $base-padding * 0
+    $base-padding * 0;
   font-size: 20px;
   letter-spacing: -0.4px;
   font-family: $font-secondary;
+  @include media-breakpoint-down-xl {
+    padding: $base-padding * 1.6 $base-padding * 0 $base-padding * 0
+      $base-padding * 0;
+  }
 }
 
 .accordion-flush .accordion-collapse {

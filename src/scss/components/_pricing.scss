@@ -5,6 +5,9 @@
 .pricing-two {
   position: relative;
   margin-top: -$base-margin * 21.5;
+  @include media-breakpoint-down-md {
+    margin-top: -$base-margin * 25;
+  }
   .card {
     transition: all 0.3s ease-in-out;
     padding: $base-padding * 3.9 $base-padding * 0 $base-padding * 3.7;
@@ -13,7 +16,15 @@
     box-shadow: 0px 0px 80px rgba(150, 0, 0, 0.06);
     z-index: 10;
     border: 1px solid white;
-
+    @include media-breakpoint-down-xl {
+      padding: $base-padding * 3 $base-padding * 0 $base-padding * 3.7;
+    }
+    @include media-breakpoint-down-lg {
+      margin: 0 $base-margin * 5 $base-margin * 3.5;
+    }
+    @include media-breakpoint-down-sm {
+      margin: 0 $base-margin * 0 $base-margin * 3.5;
+    }
     .card-title {
       font-size: $base-font-size * 1.9;
       font-weight: 700;
@@ -22,6 +33,15 @@
       line-height: 37.5px;
       padding-left: $base-padding * 2.9;
       transition: all 0.3s ease-in-out;
+      @include media-breakpoint-down-xl {
+        padding-left: $base-padding * 1.5;
+      }
+      @include media-breakpoint-down-lg {
+        padding-left: $base-padding * 2.9;
+      }
+      @include media-breakpoint-down-md {
+        padding-left: $base-padding * 1.5;
+      }
     }
     .card-text {
       font-size: $base-font-size * 1.25;
@@ -31,6 +51,20 @@
       font-weight: 400;
       font-family: $font-primary;
       padding-left: $base-padding * 2.9;
+      @include media-breakpoint-down-xxl {
+        font-size: $base-font-size * 1.1;
+      }
+      @include media-breakpoint-down-xl {
+        font-size: $base-font-size * 1;
+        padding-left: $base-padding * 1.5;
+      }
+      @include media-breakpoint-down-lg {
+        font-size: $base-font-size * 1.25;
+        padding-left: $base-padding * 2.9;
+      }
+      @include media-breakpoint-down-md {
+        padding-left: $base-padding * 1.5;
+      }
     }
     .price {
       display: flex;
@@ -85,6 +119,18 @@
     }
     &-body {
       padding: $base-padding * 0 $base-padding * 2.9;
+      @include media-breakpoint-down-xxl {
+        padding: $base-padding * 0 $base-padding * 1.9;
+      }
+      @include media-breakpoint-down-xl {
+        padding: $base-padding * 0 $base-padding * 1.5;
+      }
+      @include media-breakpoint-down-lg {
+        padding: $base-padding * 0 $base-padding * 2.9;
+      }
+      @include media-breakpoint-down-md {
+        padding: $base-padding * 0 $base-padding * 1.5;
+      }
       ul {
         margin-bottom: $base-margin * 4.5;
         li {
@@ -100,9 +146,18 @@
           i {
             margin-right: $base-margin * 1.1;
             color: #e53b2a;
+            @include media-breakpoint-down-xl {
+              margin-right: $base-margin * 1;
+            }
           }
           &:last-child {
             margin-bottom: 0;
+          }
+          @include media-breakpoint-down-xl {
+            font-size: $base-font-size * 1.1;
+          }
+          @include media-breakpoint-down-lg {
+            font-size: $base-font-size * 1.25;
           }
         }
         .deactive {
@@ -127,12 +182,32 @@
   &-inner {
     position: relative;
     padding: $base-padding * 14 $base-padding * 0 $base-padding * 27;
+    @include media-breakpoint-down-xxl {
+      padding: $base-padding * 10 $base-padding * 0 $base-padding * 27;
+    }
+    @include media-breakpoint-down-md {
+      padding: $base-padding * 10 $base-padding * 0 $base-padding * 25;
+    }
     .section-header {
       padding: 0 0 $base-padding * 1;
       h2 {
         font-size: $base-font-size * 4;
         line-height: 80px;
         margin-bottom: $base-margin * 1.5;
+        @include media-breakpoint-down-xl {
+          font-size: $base-font-size * 3.9;
+        }
+        @include media-breakpoint-down-lg {
+          font-size: $base-font-size * 3.5;
+        }
+        @include media-breakpoint-down-md {
+          font-size: $base-font-size * 3;
+          line-height: 60px;
+        }
+        @include media-breakpoint-down-sm {
+          font-size: $base-font-size * 2.5;
+          line-height: 50px;
+        }
       }
       p {
         font-size: $base-font-size * 1.35;
@@ -141,8 +216,9 @@
   }
   /* Pricing-two section */
   &-two {
-    padding: $base-padding * 3 0 $base-padding * 9.4;
+    padding: $base-padding * 3 0 $base-padding * 0.4;
     margin-top: 0;
+
     &-range {
       position: relative;
       background: $color-white;
@@ -153,11 +229,28 @@
       margin-top: -26rem;
       margin-bottom: $base-margin * 6.3;
       box-shadow: 0px 0px 80px rgba(150, 0, 0, 0.06);
+
+      @include media-breakpoint-down-md {
+        padding: 60px 30px 40px;
+      }
+
       h3 {
         color: #4d4d4d;
         font-size: 30px;
         line-height: 37.5px;
         margin-bottom: $base-margin * 6.3;
+        @include media-breakpoint-down-xl {
+          margin-bottom: $base-margin * 3.3;
+        }
+        @include media-breakpoint-down-lg {
+          margin-bottom: $base-margin * 5.3;
+        }
+        @include media-breakpoint-down-md {
+          margin-bottom: $base-margin * 3.3;
+        }
+        @include media-breakpoint-down-sm {
+          margin-bottom: $base-margin * 2;
+        }
       }
       .pricingbuttons {
         display: flex;
@@ -182,18 +275,21 @@
         }
       }
 
-      .pricingtable,
-      .pricingtable-two {
-        margin: 30px 0;
-        background: #ededed;
-        display: block;
-        color: #545454;
-        font-size: 75px;
-        padding: 10px 50px;
-      }
+      // .pricingtable,
+      // .pricingtable-two {
+      //   margin: 30px 0;
+      //   background: #ededed;
+      //   display: block;
+      //   color: #545454;
+      //   font-size: 75px;
+      //   padding: 10px 50px;
+      // }
       .employeenoinfo {
         border-bottom: 1px solid #ffe1dd;
         padding-bottom: 84px;
+        @include media-breakpoint-down-xl {
+          padding-bottom: $base-padding * 4.4;
+        }
         .employeenocont-one,
         .employeenocont-two {
           position: absolute;
@@ -203,9 +299,18 @@
           font-family: $font-primary;
           font-weight: 700;
           color: #e53b2a;
+          @include media-breakpoint-down-md {
+            left: 5%;
+          }
+          @include media-breakpoint-down-sm {
+            font-size: 30px;
+          }
         }
         .employeenocont-two {
           left: 79%;
+          @include media-breakpoint-down-md {
+            left: 75%;
+          }
         }
       }
 
@@ -215,6 +320,15 @@
         height: 1px;
         width: 68%;
         margin-left: 90px;
+        @include media-breakpoint-down-xl {
+          margin-left: 70px;
+        }
+        @include media-breakpoint-down-md {
+          width: 60%;
+        }
+        @include media-breakpoint-down-sm {
+          margin-left: 50px;
+        }
       }
       .ui-state-default,
       .ui-widget-content .ui-state-default,
@@ -244,13 +358,32 @@
       }
     }
     .card {
-      margin-bottom: $base-margin * 6.2;
+      margin-bottom: $base-margin * 3.1;
     }
-    /* Pricing-two gig section */
+  }
+  &-three {
+    overflow: auto;
+    padding: $base-padding * 2.9 0 $base-padding * 9.4;
+    @include media-breakpoint-down-md {
+      padding: $base-padding * 2 0 $base-padding * 5;
+    }
     &-gig {
       padding: $base-padding * 3.8 $base-padding * 4.5;
       box-shadow: 0px 0px 80px rgba(150, 0, 0, 0.06);
       border-radius: 20px;
+
+      @include media-breakpoint-down-lg {
+        padding: $base-padding * 3 $base-padding * 2 $base-padding * 1.5;
+      }
+      @include media-breakpoint-down-lg {
+        width: 900px;
+        overflow-x: scroll;
+      }
+      @include media-breakpoint-down-md {
+        width: 700px;
+        overflow-x: scroll;
+      }
+
       .table {
         thead {
           tr {
@@ -275,7 +408,10 @@
                 p {
                   font-size: $base-font-size * 1.9;
                   text-align: left;
-                  margin-bottom: 42px;
+                  margin-bottom: $base-margin * 2.6;
+                  @include media-breakpoint-down-sm {
+                    margin-bottom: $base-margin * 1.6;
+                  }
                 }
               }
             }
@@ -288,6 +424,9 @@
               font-size: $base-font-size * 1.25;
               font-family: $font-primary;
               font-weight: 600;
+              @include media-breakpoint-down-sm {
+                padding: 30px 0 20px;
+              }
             }
             td {
               i {
@@ -295,6 +434,9 @@
                 display: block;
                 padding: 50px 0 20px;
                 text-align: center;
+                @include media-breakpoint-down-sm {
+                  padding: 30px 0 20px;
+                }
               }
               .deactive {
                 color: #ffe1dd;
@@ -305,6 +447,10 @@
       }
       .table > :not(:last-child) > :last-child > * {
         border: none;
+      }
+      .border-none {
+        border: none;
+        border-color: white;
       }
     }
   }
