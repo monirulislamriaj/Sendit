@@ -1,10 +1,27 @@
 .works {
   padding: $base-padding * 9.4 $base-padding * 0 $base-padding * 3.2;
+  @include media-breakpoint-down-xxl {
+    padding: $base-padding * 6 $base-padding * 0 $base-padding * 3.2;
+    overflow: hidden;
+  }
+  @include media-breakpoint-down-xl {
+    padding: $base-padding * 6 $base-padding * 0 $base-padding * 0;
+  }
+  @include media-breakpoint-down-lg {
+    padding: $base-padding * 4 $base-padding * 0 $base-padding * 0;
+  }
   &-content {
+    @include media-breakpoint-down-lg {
+      padding-bottom: $base-padding * 5;
+      text-align: center;
+    }
     h2 {
       margin-bottom: $base-margin * 1.5;
       font-size: $base-font-size * 2.8;
       line-height: 56.25px;
+      @include media-breakpoint-down-md {
+        font-size: $base-font-size * 1.9;
+      }
     }
     p {
       font-size: $base-font-size * 1.4;
@@ -12,6 +29,16 @@
       line-height: 36.3px;
       margin-bottom: $base-margin * 3.1;
       width: 80%;
+      @include media-breakpoint-down-xxl {
+        width: 90%;
+      }
+      @include media-breakpoint-down-xl {
+        width: 100%;
+        font-size: $base-font-size * 1.2;
+      }
+      @include media-breakpoint-down-lg {
+        margin-bottom: $base-margin * 1.5;
+      }
     }
   }
   &-banner {
@@ -33,6 +60,11 @@
       top: -96px;
       left: -89px;
       z-index: -1;
+      @include media-breakpoint-down-xxl {
+        img {
+          max-width: 100%;
+        }
+      }
     }
     .video {
       position: relative;

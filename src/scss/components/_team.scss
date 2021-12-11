@@ -3,15 +3,35 @@
 **********/
 .team {
   padding: $base-padding * 3 $base-padding * 0 $base-padding * 9.4;
+  @include media-breakpoint-down-xxl {
+    padding: $base-padding * 3 $base-padding * 0 $base-padding * 5;
+  }
+  @include media-breakpoint-down-xl {
+    padding: $base-padding * 3 $base-padding * 0 $base-padding * 3;
+  }
+  @include media-breakpoint-down-md {
+    padding: $base-padding * 0 $base-padding * 0 $base-padding * 4;
+  }
   .section-header {
     padding-bottom: $base-padding * 3.5;
+    @include media-breakpoint-down-xxl {
+      padding: $base-padding * 3 $base-padding * 0 $base-padding * 3.5;
+    }
+    @include media-breakpoint-down-md {
+      padding: $base-padding * 3 $base-padding * 0 $base-padding * 1.5;
+    }
   }
   &-member {
     margin-bottom: $base-margin * 3.1;
+    @include media-breakpoint-down-lg {
+      margin-bottom: $base-margin * 2.5;
+      text-align: center;
+    }
+
     &-thumb {
       margin-bottom: $base-margin * 1.5;
       img {
-        width: 100%;
+        max-width: 100%;
       }
     }
     &-details {
@@ -25,6 +45,12 @@
         font-size: $base-font-size * 1.25;
         color: #4d4d4d;
         font-family: $font-primary;
+        @include media-breakpoint-down-xl {
+          font-size: $base-font-size * 1.2;
+        }
+        @include media-breakpoint-down-lg {
+          font-size: $base-font-size * 1.25;
+        }
       }
     }
   }

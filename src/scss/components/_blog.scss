@@ -3,6 +3,9 @@
 **********/
 .blog {
   margin-top: -$base-margin * 22.5;
+  @include media-breakpoint-down-xxl {
+    margin-top: -$base-margin * 19.5;
+  }
   // start block hero section
   &-hero {
     background: #fffbf3;
@@ -104,17 +107,20 @@
       }
     }
   }
-  &-two {
-    // padding-bottom: $base-padding * 12.5;
-    margin-top: 0;
-    .section-header {
-      padding-bottom: $base-padding * 3.5;
-      p {
-        width: 72%;
-        margin: 0 auto;
-      }
-    }
-  }
+  // .more-blog {
+  //   margin: $base-margin * 3 0 $base-margin * 9.5;
+  // }
+  // &-two {
+  //   // padding-bottom: $base-padding * 12.5;
+  //   margin-top: 0;
+  //   .section-header {
+  //     padding-bottom: $base-padding * 3.5;
+  //     p {
+  //       width: 72%;
+  //       margin: 0 auto;
+  //     }
+  //   }
+  // }
   // start block details section
   &-details {
     position: relative;

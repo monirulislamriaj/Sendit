@@ -5,18 +5,64 @@
   &-hero-one {
     padding: $base-padding * 4.5 0 $base-padding * 29;
     background: #f7f8fa;
+    @include media-breakpoint-down-xl {
+      padding: $base-padding * 4.5 0 $base-padding * 20;
+    }
+    @include media-breakpoint-down-md {
+      padding: $base-padding * 4.5 0 $base-padding * 10;
+    }
+    @include media-breakpoint-down-sm {
+      padding: $base-padding * 6 0 $base-padding * 10;
+    }
   }
   &-hero-two {
     padding: $base-padding * 9 0 $base-padding * 3;
     background: #f7f8fa;
+    overflow: hidden;
+    @include media-breakpoint-down-xxl {
+      padding: $base-padding * 10 0 $base-padding * 18;
+    }
+    @include media-breakpoint-down-xl {
+      padding: $base-padding * 10 0 $base-padding * 48;
+      text-align: center;
+    }
+    @include media-breakpoint-down-md {
+      padding: $base-padding * 10 0 $base-padding * 38;
+    }
+    @include media-breakpoint-down-sm {
+      padding: $base-padding * 10 0 $base-padding * 27;
+    }
+
     &-content {
       padding: $base-padding * 9.4 0 $base-padding * 4.1;
+      @include media-breakpoint-down-xxl {
+        padding: $base-padding * 0 0 $base-padding * 4.1;
+      }
+      @include media-breakpoint-down-lg {
+        padding: $base-padding * 0 0 $base-padding * 0;
+      }
       h2 {
         position: relative;
         font-size: $base-font-size * 4;
         line-height: 81.25px;
         letter-spacing: -0.4px;
         margin-bottom: $base-margin * 1.5;
+        @include media-breakpoint-down-xxl {
+          font-size: $base-font-size * 3.4;
+          line-height: 60.25px;
+        }
+        @include media-breakpoint-down-xl {
+          font-size: $base-font-size * 3.5;
+          line-height: 70.25px;
+        }
+        @include media-breakpoint-down-md {
+          font-size: $base-font-size * 3;
+          line-height: 60px;
+        }
+        @include media-breakpoint-down-sm {
+          font-size: $base-font-size * 2.5;
+          line-height: 50px;
+        }
       }
       p {
         font-size: $base-font-size * 1.4;
@@ -25,6 +71,16 @@
         line-height: 36.3px;
         letter-spacing: -0.4px;
         margin-bottom: $base-margin * 9;
+        @include media-breakpoint-down-xxl {
+          margin-bottom: $base-margin * 5;
+        }
+        @include media-breakpoint-down-xl {
+          margin: 0 auto $base-margin * 2.5;
+          width: 80%;
+        }
+        @include media-breakpoint-down-xl {
+          width: 100%;
+        }
       }
       .scroll-down {
         a {
@@ -48,6 +104,9 @@
         border-radius: 20px;
         top: 0%;
         z-index: 1;
+        img {
+          max-width: 100%;
+        }
         &::after {
           position: absolute;
           content: "";
@@ -62,25 +121,85 @@
       }
       .image-one {
         right: 0%;
+        @include media-breakpoint-down-xl {
+          right: 15%;
+        }
+        @include media-breakpoint-down-lg {
+          right: 0%;
+        }
+        @include media-breakpoint-down-md {
+          width: 60%;
+        }
       }
       .image-two {
         left: 15%;
         top: 286px;
+        @include media-breakpoint-down-xxl {
+          left: 0%;
+        }
+        @include media-breakpoint-down-xl {
+          left: 15%;
+        }
+        @include media-breakpoint-down-lg {
+          left: 10%;
+        }
+        @include media-breakpoint-down-md {
+          top: 215px;
+          width: 60%;
+        }
+        @include media-breakpoint-down-sm {
+          top: 166px;
+          width: 59%;
+        }
       }
       .image-three {
         left: 8%;
         top: 30px;
+        @include media-breakpoint-down-xxl {
+          left: 0%;
+        }
+        @include media-breakpoint-down-xl {
+          left: 15%;
+        }
+        @include media-breakpoint-down-lg {
+          left: 0%;
+        }
+        @include media-breakpoint-down-md {
+          width: 28%;
+        }
       }
       .pattern,
       .pattern-two {
         position: absolute;
         top: 0;
         left: -20px;
+        img {
+          max-width: 100%;
+        }
+        @include media-breakpoint-down-xxl {
+          left: -100px;
+        }
+        @include media-breakpoint-down-xl {
+          left: 0px;
+        }
       }
       .pattern-two {
         top: 570px;
         left: 82%;
         z-index: 1;
+        @include media-breakpoint-down-xl {
+          left: 67%;
+        }
+        @include media-breakpoint-down-lg {
+          left: 76%;
+          top: 480px;
+        }
+        @include media-breakpoint-down-md {
+          top: 340px;
+        }
+        @include media-breakpoint-down-sm {
+          top: 255px;
+        }
       }
     }
   }
@@ -88,26 +207,63 @@
     margin-top: -$base-margin * 28.4;
     // padding-bottom: $base-padding * 9.4;
     position: relative;
+    @include media-breakpoint-down-xl {
+      margin-top: -$base-margin * 20;
+    }
+    @include media-breakpoint-down-md {
+      margin-top: -$base-margin * 11;
+    }
     .feature-image {
       position: relative;
       text-align: center;
       padding-bottom: $base-padding * 9.4;
       z-index: 2;
+      img {
+        max-width: 100%;
+      }
+      @include media-breakpoint-down-xxl {
+        padding-bottom: $base-padding * 5;
+      }
+      @include media-breakpoint-down-md {
+        padding-bottom: $base-padding * 3;
+      }
       .pattern {
         position: absolute;
         top: -12%;
-        left: -1%;
+        right: 2%;
         z-index: -1;
+        img {
+          max-width: 100%;
+        }
+        @include media-breakpoint-down-xxl {
+          right: -4%;
+        }
+        @include media-breakpoint-down-xl {
+          right: -3%;
+        }
       }
     }
     .content {
       text-align: center;
       padding: 0 $base-padding * 4;
+      @include media-breakpoint-down-xxl {
+        padding: 0 $base-padding * 1 $base-padding * 0;
+      }
+      @include media-breakpoint-down-lg {
+        padding: 0 $base-padding * 0 $base-padding * 0;
+      }
       p {
-        font-size: 22px;
+        font-size: $base-font-size * 1.4;
         font-weight: 500;
         line-height: 36.3px;
         margin-bottom: 0;
+        @include media-breakpoint-down-md {
+          font-size: $base-font-size * 1.25;
+          text-align: left;
+        }
+        @include media-breakpoint-down-sm {
+          font-size: $base-font-size * 1.1;
+        }
       }
     }
   }
