@@ -88,7 +88,7 @@
     }
     p {
       color: $color-text-light;
-      margin-bottom: $base-margin * 1.25;
+      margin-bottom: $base-margin * 0.7;
       font-size: 20px;
       line-height: 33px;
       letter-spacing: -0.8px;
@@ -144,11 +144,14 @@
   &-hero,
   &-hero-two {
     background: #fff4f2;
-    padding: $base-padding * 8 0 $base-padding * 3.5;
+    padding: $base-padding * 8 0 $base-padding * 4;
     overflow: hidden;
     @include media-breakpoint-down-lg {
       padding: $base-padding * 10 0 $base-padding * 0;
       text-align: center;
+    }
+    @include media-breakpoint-down-sm {
+      padding: $base-padding * 9 0 $base-padding * 0;
     }
     &-content {
       h1 {
@@ -190,9 +193,6 @@
           padding: $base-padding * 0 $base-padding * 5;
         }
         @include media-breakpoint-down-md {
-          padding: $base-padding * 0 $base-padding * 3;
-        }
-        @include media-breakpoint-down-sm {
           padding: $base-padding * 0 $base-padding * 0;
         }
       }
@@ -213,7 +213,7 @@
   }
   &-hero-two {
     background: #fffbf3;
-    padding: $base-padding * 7.5 0 $base-padding * 3.2;
+    padding: $base-padding * 9 0 $base-padding * 4;
     @include media-breakpoint-down-lg {
       padding: $base-padding * 10 0 $base-padding * 1;
     }
@@ -233,6 +233,7 @@
         }
         @include media-breakpoint-down-sm {
           font-size: $base-font-size * 2.5;
+          line-height: 50px;
         }
       }
     }
@@ -251,7 +252,7 @@
   &-three {
     // background: $color-gray;
     position: relative;
-    padding: $base-padding * 9.5 0 $base-padding * 7.5;
+    padding: $base-padding * 9.5 0 $base-padding * 5.5;
     overflow: hidden;
     @include media-breakpoint-down-xxl {
       padding: $base-padding * 7 0 $base-padding * 7;
@@ -262,12 +263,16 @@
 
     &-banner {
       position: relative;
-      z-index: 4;
+      z-index: 22;
       @include media-breakpoint-down-lg {
+        margin-bottom: $base-margin * 2.5;
+      }
+      @include media-breakpoint-down-md {
         margin-bottom: $base-margin * 1.5;
       }
       img {
-        z-index: 1;
+        position: relative;
+        z-index: 9;
         max-width: 100%;
         @include media-breakpoint-down-xl {
           width: 100%;
@@ -319,6 +324,7 @@
           margin-bottom: $base-margin * 2.5;
           @include media-breakpoint-down-xl {
             margin-bottom: $base-margin * 1.5;
+            font-size: $base-font-size * 2.5;
           }
           @include media-breakpoint-down-sm {
             font-size: $base-font-size * 1.9;
@@ -339,22 +345,36 @@
             padding-left: $base-padding * 1;
           }
           li {
-            color: #4d4d4d;
-            font-size: $base-font-size * 1.3;
+            color: $color-text-light;
+            font-size: $base-font-size * 1.25;
+            line-height: 33px;
             list-style: disc;
-            line-height: 32.5px;
             margin-bottom: $base-margin * 1.3;
+            font-weight: 500;
             font-family: $font-secondary;
             letter-spacing: -0.4px;
             @include media-breakpoint-down-xl {
               font-size: $base-font-size * 1.1;
-              margin-bottom: $base-margin * 0.5;
+              margin-bottom: $base-margin * 1;
             }
           }
         }
         .Learn-more {
+          display: flex;
+          align-items: center;
+          @include media-breakpoint-down-lg {
+            margin-top: $base-margin * 3;
+          }
+          @include media-breakpoint-down-sm {
+            margin-top: $base-margin * 1.25;
+          }
           a {
             color: #e53b2a;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: $font-primary;
             i {
               margin-left: 10px;
             }
@@ -368,10 +388,8 @@
   **********/
   &-three {
     position: relative;
-    @include media-breakpoint-down-lg {
-      padding: $base-padding * 3 0 $base-padding * 5;
-    }
     .feature-item-content {
+      position: relative;
       z-index: 9;
       h2 {
         padding: $base-padding * 1.9 $base-padding * 2.5;
@@ -446,8 +464,12 @@
     }
     &-wrapper {
       @include media-breakpoint-down-lg {
+        margin-bottom: $base-margin * 2.5;
+      }
+      @include media-breakpoint-down-md {
         margin-bottom: $base-margin * 1.5;
       }
+
       .shape {
         top: 64%;
         right: 49%;
@@ -473,7 +495,8 @@
           padding: $base-padding * 3 $base-padding * 2 $base-padding * 4.5;
         }
         @include media-breakpoint-down-xl {
-          padding: $base-padding * 3 $base-padding * 2 $base-padding * 2;
+          padding: $base-padding * 3 $base-padding * 1 $base-padding * 2
+            $base-padding * 2;
         }
         h2 {
           font-size: $base-font-size * 2.8;

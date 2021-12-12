@@ -89,26 +89,43 @@ a {
 **********/
 
 /* Privacy Page */
-.privacys {
-  display: flex;
-  background: #ffffff;
-  border-radius: 20px 20px 0px 0px;
-  padding: $base-padding * 5 0 $base-padding * 5 $base-padding * 1.6;
-}
+
 .privacy {
   position: relative;
-  margin-top: -$base-margin * 34.5;
+  margin-top: -$base-margin * 33.5;
   padding-bottom: $base-padding * 7.5;
   z-index: 99;
+  @include media-breakpoint-down-xxl {
+    padding-bottom: $base-padding * 4;
+  }
+  @include media-breakpoint-down-md {
+    margin-top: -$base-margin * 35.8;
+    padding-bottom: $base-padding * 0;
+  }
   &-hero {
     background: #f7f8fa;
-    padding: $base-padding * 14.5 0 $base-padding * 37;
+    padding: $base-padding * 13.5 0 $base-padding * 37;
+    @include media-breakpoint-down-xxl {
+      padding: $base-padding * 12 0 $base-padding * 37;
+    }
+    @include media-breakpoint-down-sm {
+      padding: $base-padding * 10 0 $base-padding * 37;
+    }
     &-content {
       h1 {
         font-size: $base-font-size * 4;
         margin-bottom: $base-margin * 1.5;
+        @include media-breakpoint-down-md {
+          font-size: $base-font-size * 2.5;
+        }
       }
     }
+  }
+  &-wrapper {
+    display: flex;
+    background: #ffffff;
+    border-radius: 20px 20px 0px 0px;
+    padding: $base-padding * 5 0 $base-padding * 5 $base-padding * 1.6;
   }
   .navbar {
     background-color: white;
@@ -117,6 +134,9 @@ a {
     padding: 0;
     border-radius: 20px;
     z-index: 1;
+    @include media-breakpoint-down-lg {
+      display: none;
+    }
   }
   .nav-pills .nav-link.active,
   .nav-pills .show > .nav-link {
@@ -131,6 +151,9 @@ a {
     .nav-pills {
       display: block;
       padding-right: $base-padding * 4;
+      @include media-breakpoint-down-xl {
+        padding-right: $base-padding * 1;
+      }
       .nav-item {
         padding-bottom: $base-padding * 1.9;
         position: relative;
@@ -159,8 +182,10 @@ a {
     .card {
       background: none;
       padding: 0;
-      margin-bottom: $base-margin * 3.8;
-      // opacity: 0.5;
+      margin-bottom: $base-margin * 6.3;
+      @include media-breakpoint-down-xl {
+        margin-bottom: $base-margin * 3.1;
+      }
       h3 {
         color: #4d4d4d;
         font-size: $base-font-size * 1.9;
@@ -174,9 +199,14 @@ a {
           font-size: $base_font-size * 1.1;
           font-weight: 500;
           margin-bottom: $base-margin * 2.5;
+          padding-left: $base-padding * 1.5;
+          @include media-breakpoint-down-md {
+            padding: 0 $base-padding * 1.5;
+          }
         }
         ul {
-          margin-bottom: $base-margin * 2.5;
+          margin-bottom: 0;
+          padding-left: $base-padding * 1.6;
           li {
             position: relative;
             list-style: none;
@@ -319,22 +349,7 @@ a {
   @include media-breakpoint-down-md {
     font-size: $base-font-size * 1.1;
   }
-  span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 49px;
-    height: 49px;
-    background: #f7f8fa;
-    border: 2px solid #e6ebf4;
-    border-radius: 50%;
-    margin-right: 30px;
-    font-size: 20px;
-    font-weight: 400;
-    @include media-breakpoint-down-md {
-      margin-right: 16px;
-    }
-  }
+
   // &:focus{
   //   border: 1px solid #FFBA08;
   // }
@@ -387,14 +402,33 @@ a {
 //   border: 1px solid red;
 // }
 .accordion-item {
+  position: relative;
   background: #fcfcfc;
   border-radius: 14px !important;
   margin-bottom: 40px;
   border: 1px solid #fff;
-  padding: 24px 40px;
+  padding: 30px 40px 30px 90px;
   @include media-breakpoint-down-md {
     margin-bottom: 20px;
-    padding: 24px 16px;
+  }
+  span {
+    position: absolute;
+    display: inline-block;
+    left: 21px;
+    top: 25px;
+    text-align: center;
+    width: 49px;
+    height: 49px;
+    line-height: 49px;
+    background: #f7f8fa;
+    border: 2px solid #e6ebf4;
+    border-radius: 50%;
+    margin-right: 0px;
+    font-size: 20px;
+    font-weight: 400;
+    @include media-breakpoint-down-lg {
+      top: 20px;
+    }
   }
 }
 

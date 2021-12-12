@@ -3,14 +3,34 @@
 **********/
 .contact {
   padding-bottom: $base-padding * 9.4;
+  @include media-breakpoint-down-xl {
+    padding-bottom: $base-padding * 5;
+  }
   &-hero {
     background: #f7f8fa;
     padding: $base-padding * 17.4 0 $base-padding * 9.6;
+    @include media-breakpoint-down-xl {
+      padding: $base-padding * 13 0 $base-padding * 5;
+    }
+    @include media-breakpoint-down-lg {
+      padding: $base-padding * 12 0 $base-padding * 20;
+      text-align: center;
+    }
+    @include media-breakpoint-down-md {
+      padding: $base-padding * 10 0 $base-padding * 68;
+    }
+    @include media-breakpoint-down-sm {
+      padding: $base-padding * 8 0 $base-padding * 66;
+    }
+
     &-content {
       h1 {
         font-size: $base-font-size * 4;
-
         margin-bottom: $base-margin * 1.5;
+        @include media-breakpoint-down-sm {
+          font-size: $base-font-size * 2.5;
+          line-height: 50px;
+        }
       }
       p {
         font-size: $base-font-size * 1.4;
@@ -18,12 +38,18 @@
         font-weight: 500;
         line-height: 36.3px;
         width: 80%;
+        @include media-breakpoint-down-lg {
+          width: 100%;
+        }
       }
     }
   }
   &-form-Information {
     .address {
       padding-top: $base-padding * 5;
+      @include media-breakpoint-down-md {
+        padding-top: $base-padding * 3.1;
+      }
       h3 {
         font-size: $base-font-size * 1.6;
         font-weight: 600;
@@ -33,6 +59,9 @@
         font-size: $base-font-size * 1.25;
         color: #4d4d4d;
         margin-bottom: $base-margin * 2.6;
+        @include media-breakpoint-down-md {
+          margin-bottom: $base-margin * 1.5;
+        }
       }
       .item {
         background: #f7f8fa;
@@ -69,6 +98,19 @@
       margin-top: -$base-margin * 28.2;
       padding: $base-padding * 4.2 $base-padding * 3.3 $base-padding * 3.1;
       background: #ffffff;
+      @include media-breakpoint-down-xl {
+        margin-top: -$base-margin * 22;
+      }
+      @include media-breakpoint-down-lg {
+        margin-top: -$base-margin * 17;
+      }
+      @include media-breakpoint-down-md {
+        margin-top: -$base-margin * 64;
+        padding: $base-padding * 2.5 $base-padding * 1.25 $base-padding * 1.25;
+      }
+      @include media-breakpoint-down-sm {
+        margin-top: -$base-margin * 63;
+      }
       h3 {
         font-size: $base-font-size * 1.9;
         margin-bottom: $base-margin * 3;
@@ -107,6 +149,9 @@
       top: -10%;
       left: -14%;
       z-index: -1;
+      img {
+        max-width: 100%;
+      }
     }
   }
 }

@@ -1,7 +1,13 @@
 .video {
   position: relative;
-  // padding: $base-padding * 5.6 0 $base-padding * 13.5 0;
+  padding-top: $base-padding * 13;
   overflow: hidden;
+  @include media-breakpoint-down-xxl {
+    padding-top: $base-padding * 8;
+  }
+  @include media-breakpoint-down-xl {
+    padding-top: $base-padding * 4;
+  }
   .banner {
     position: relative;
     z-index: 1;

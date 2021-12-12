@@ -9,8 +9,11 @@
   @include media-breakpoint-down-xxl {
     padding: $base-padding * 10 0 $base-padding * 0;
   }
+  @include media-breakpoint-down-lg {
+    padding: $base-padding * 12 0 $base-padding * 0;
+  }
   @include media-breakpoint-down-sm {
-    padding: $base-padding * 9 0 $base-padding * 0;
+    padding: $base-padding * 8.4 0 $base-padding * 0;
   }
   &-content {
     position: relative;
@@ -88,10 +91,13 @@
     z-index: 1;
     overflow: hidden;
     @include media-breakpoint-down-xl {
-      padding: $base-padding * 11.3 0 $base-padding * 2;
+      padding: $base-padding * 8 0 $base-padding * 2;
     }
     @include media-breakpoint-down-lg {
-      padding: $base-padding * 11.3 0 $base-padding * 5;
+      padding: $base-padding * 8 0 $base-padding * 5;
+    }
+    @include media-breakpoint-down-md {
+      padding: $base-padding * 6 0 $base-padding * 5;
     }
     &-shape {
       position: absolute;
@@ -100,6 +106,7 @@
       z-index: -1;
     }
     &-content {
+      margin-top: $base-margin * 3;
       padding-left: $base-padding * 18;
       @include media-breakpoint-down-xxl {
         padding-left: $base-padding * 5;
@@ -146,8 +153,10 @@
       text-align: right;
       max-width: 100%;
       margin-right: -13px;
-
       z-index: 1;
+      img {
+        border-radius: 0px;
+      }
       &-shape {
         position: absolute;
         top: -26%;

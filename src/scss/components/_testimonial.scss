@@ -6,6 +6,9 @@
   position: relative;
   border-bottom: 1px solid #282828;
   overflow: hidden;
+  @include media-breakpoint-down-sm {
+    border-bottom: none;
+  }
   &-content {
     padding-right: 50px;
     @include media-breakpoint-down-xl {
@@ -99,6 +102,9 @@
     z-index: 1;
     background: $color-white;
     border-radius: 30px;
+    @include media-breakpoint-down-md {
+      border-radius: 15px;
+    }
     &-item {
       position: relative;
       padding: $base-padding * 5 $base-padding * 3.2 $base-padding * 4.7;

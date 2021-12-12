@@ -66,8 +66,14 @@
   &-two {
     padding: $base-padding * 0 0 $base-padding * 8.5;
     background: #fff4f2;
+    @include media-breakpoint-down-xl {
+      padding: $base-padding * 0 0 $base-padding * 3;
+    }
     .section-header {
       padding-top: $base-padding * 6.2;
+      @include media-breakpoint-down-xl {
+        padding-top: $base-padding * 3;
+      }
       h2 {
         color: $color-black;
       }

@@ -12,6 +12,9 @@
   @include media-breakpoint-down-md {
     padding: $base-padding * 0 $base-padding * 0 $base-padding * 4;
   }
+  @include media-breakpoint-down-sm {
+    padding: $base-padding * 0 $base-padding * 0 $base-padding * 2;
+  }
   .section-header {
     padding-bottom: $base-padding * 3.5;
     @include media-breakpoint-down-xxl {
