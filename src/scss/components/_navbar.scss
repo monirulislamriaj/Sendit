@@ -303,20 +303,15 @@
       .mega-menu {
         // padding: 34px 31px 18px;
         &-items {
-          display: block;
-          border-radius: 10px;
-          padding: 0px 28px 0 0;
-          margin: 1rem 0;
-          min-width: 400px;
+          display: flex;
+          border-radius: 0px;
+          padding: 0px 28px 20px 0;
+          margin: 1rem 0 2rem;
           transition: all 0.3s ease-in-out;
+          border-bottom: 1px solid #e6ebf4;
+          text-align: left;
           .icon {
             margin-right: 1rem;
-            svg {
-              path {
-                transition: all 0.3s ease-in-out;
-                fill: #282828;
-              }
-            }
           }
           .content {
             a {
@@ -350,6 +345,16 @@
             }
           }
         }
+        li.dropdown-megamenu-column-items {
+          display: block;
+          padding: 0;
+        }
+        .dropdown-megamenu-conatiner {
+          border-bottom: none;
+          .dropdown-megamenu-column-items {
+            border-bottom: none !important;
+          }
+        }
       }
     }
   }
@@ -362,61 +367,13 @@
   background: $color-white;
   box-shadow: 0px 45px 80px rgba(0, 0, 0, 0.04);
   z-index: 1000;
-  .btn-gray-dark {
-    background: $color-white;
-  }
-  .navbar-brand-two {
-    .white-logo {
-      display: none;
-    }
-    .logo {
-      display: block;
-    }
-  }
-  .navbar-two {
-    .nav-link {
-      color: $color-text;
-    }
-    .btn-links {
-      background: rgba(7, 12, 19, 0.04);
-      color: $color-text;
-      border: 1px solid rgba(7, 12, 19, 0.04);
-      span {
-        color: $color-text;
-        &:nth-child(1) {
-          svg {
-            path {
-              stroke: $color-text;
-            }
-          }
-        }
-      }
-    }
-  }
 }
 //Customize style for mobile
-@include media-breakpoint-down-lg {
-  .navbar-brand-two {
-    .white-logo {
-      display: none;
-    }
-    .logo {
-      display: block;
-    }
-  }
-  .navbar-two {
-    .nav-link {
-      color: $color-text-light;
-    }
-    .btn-links {
-      background: rgba(7, 12, 19, 0.04);
-      border: $base-border-width solid rgba(7, 12, 19, 0.04);
-      span {
-        color: $color-text;
-      }
-    }
-  }
-}
+// @include media-breakpoint-down-lg {
+//   .sticky-nav {
+//     padding: $base-padding * 2 $base-padding * 2 $base-padding * 1 !important;
+//   }
+// }
 @include media-breakpoint-down-sm {
   .sticky-nav {
     padding: $base-padding !important;

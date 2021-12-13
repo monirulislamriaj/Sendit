@@ -4,9 +4,11 @@
 .access {
   padding: $base-padding * 9.4 $base-padding * 0 $base-padding * 12.5;
   position: relative;
-
   @include media-breakpoint-down-xxl {
     padding: $base-padding * 7 $base-padding * 0 $base-padding * 8;
+  }
+  @include media-breakpoint-down-xl {
+    padding: $base-padding * 7 $base-padding * 0 $base-padding * 5;
   }
   @include media-breakpoint-down-lg {
     padding: $base-padding * 5 $base-padding * 0 $base-padding * 5;
