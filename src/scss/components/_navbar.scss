@@ -19,7 +19,7 @@
   //   background: transparent;
   //   width: 155px;
   // }
-  @include media-breakpoint-down-xl {
+  @include media-breakpoint-down-xxl {
     padding-left: 2.4rem;
     padding-right: 2.4rem;
   }
@@ -283,8 +283,8 @@
         height: auto;
         text-align: center;
         background: #f7f8fa;
-        width: calc(100% + 2rem);
-        margin-left: -2.8rem;
+        width: calc(100% + 0rem);
+        margin-left: -2rem;
         border-radius: 0;
         margin-top: -60px;
       }

@@ -97,15 +97,15 @@ $(document).ready(function () {
   });
   
 // more blog lode
-// $(function () {
-//   $("body").on('click touchstart', '.load-more', function (e) {
-//     e.preventDefault();
-//     $(".next-blog:hidden").slice(0, 3).slideDown();
-//     if ($(".next-blog:hidden").length == 0) {
-//       $(".load-more").css('display', 'none');
-//     }
-//   });
-// });
+$(function () {
+  $("body").on('click touchstart', '.load-more', function (e) {
+    e.preventDefault();
+    $(".next-blog:hidden").slice(0, 3).slideDown();
+    if ($(".next-blog:hidden").length == 0) {
+      $(".load-more").css('display', 'none');
+    }
+  });
+});
  
   // Magnific Popup
   $(".popup-vimeo").magnificPopup({
