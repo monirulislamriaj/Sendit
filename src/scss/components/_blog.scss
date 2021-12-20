@@ -253,7 +253,7 @@
       z-index: 999;
       top: 50%;
       left: 2%;
-      @include media-breakpoint-down-xl {
+      @include media-breakpoint-down-xxl {
         left: 0%;
       }
       @include media-breakpoint-down-sm {

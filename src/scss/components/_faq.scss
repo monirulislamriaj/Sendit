@@ -55,8 +55,10 @@
         @include media-breakpoint-down-xxl {
           padding-right: $base-padding * 2;
         }
-        @include media-breakpoint-down-lg {
+        @include media-breakpoint-down-xl {
           padding-right: $base-padding * 0;
+        }
+        @include media-breakpoint-down-lg {
           font-size: $base-font-size * 1.4;
         }
       }
