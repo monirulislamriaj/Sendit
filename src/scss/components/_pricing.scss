@@ -193,7 +193,7 @@
       padding: $base-padding * 10 $base-padding * 0 $base-padding * 27;
     }
     @include media-breakpoint-down-sm {
-      padding: $base-padding * 8 $base-padding * 0 $base-padding * 27;
+      padding: $base-padding * 8.5 $base-padding * 0 $base-padding * 27;
     }
     .section-header {
       padding: 0 0 $base-padding * 1;
@@ -230,7 +230,7 @@
     &-range {
       position: relative;
       background: $color-white;
-      border: 1px solid rgba(229, 59, 42, 0.3);
+      border: 1px solid #f7f8fa;
       padding: 60px 90px 40px;
       text-align: center;
       border-radius: 34px;
@@ -269,11 +269,13 @@
           background: transparent;
           display: inline-block;
           padding: 15px 30px;
-          border-radius: 14px;
-          color: #545454;
+          font-size: 18px;
+          border-radius: 12px;
+          color: #e53b2a;
           text-decoration: none;
-          text-transform: uppercase;
-          font-family: Arial;
+          text-transform: capitalize;
+          font-family: $font-primary;
+          font-weight: 600;
           margin: 0 10px;
           border: 1px solid rgba(229, 59, 42, 0.3);
         }
@@ -323,11 +325,14 @@
       }
 
       .priceslider.ui-widget.ui-widget-content {
+        position: relative;
         border: 4px solid #ffe1dd;
         background: #ffe1dd;
         height: 1px;
         width: 68%;
         margin-left: 90px;
+        border-radius: 0;
+
         @include media-breakpoint-down-xl {
           margin-left: 70px;
         }
@@ -343,26 +348,16 @@
       .ui-widget-header .ui-state-default,
       .ui-button,
       html .ui-button.ui-state-disabled:hover,
-      html .ui-button.ui-state-disabled:active {
-        border: 1 px solid #e53b2a;
-        background: #f6f6f6;
-        font-weight: normal;
-        color: #454545;
+      html .ui-button.ui-state-disabled:active,
+      html .ui-button.ui-state-disabled:focus {
+        border: 1px solid #e53b2a !important;
+        color: #e53b2a !important;
         border-radius: 50px;
         background: #e53b2a;
         width: 30px;
         height: 30px;
         top: -16px;
         left: 50%;
-      }
-
-      .ui-state-default,
-      .ui-widget-content .ui-state-default,
-      .ui-widget-header .ui-state-default,
-      .ui-button,
-      html .ui-button.ui-state-disabled:hover,
-      html .ui-button.ui-state-disabled:focus {
-        border: 1 px solid #e53b2a;
       }
     }
     .card {

@@ -1,5 +1,8 @@
+/********** 
+ 07. cta Page and Section Styles
+**********/
+
 .cta {
-  // padding: $base-padding * 9.4 0 $base-padding * 3.5;
   text-align: center;
   background: $color-black;
   .section-header {
@@ -23,13 +26,11 @@
       }
     }
   }
-
   &-subscribe-form {
     .from-group {
       position: relative;
       .input-group {
         padding: 0;
-
         .form-control {
           position: relative;
           color: $color-white;
@@ -42,6 +43,10 @@
           z-index: 0;
           @include media-breakpoint-down-sm {
             padding: 20px 180px 20px 20px;
+          }
+          &:focus {
+            box-shadow: none;
+            background: $color-black;
           }
         }
         ::placeholder {
@@ -63,6 +68,7 @@
       }
     }
   }
+  // start cta two section
   &-two {
     padding: $base-padding * 0 0 $base-padding * 8.5;
     background: #fff4f2;
@@ -85,6 +91,19 @@
     .cta-subscribe-form {
       .from-group {
         .input-group {
+          .form-control {
+            &:focus {
+              border-color: black;
+            }
+          }
+          .subscribe {
+            .btn-lg {
+              padding: $base-padding * 1.2 $base-padding * 2.2;
+              @include media-breakpoint-down-sm {
+                padding: $base-padding * 0.7 $base-padding * 1;
+              }
+            }
+          }
           ::placeholder {
             color: #e53b2a;
           }

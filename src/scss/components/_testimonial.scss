@@ -78,6 +78,7 @@
       @include media-breakpoint-down-md {
         width: 100%;
         left: 2%;
+        height: 99%;
       }
     }
     &::before {
@@ -92,7 +93,7 @@
         left: 1%;
       }
       @include media-breakpoint-down-md {
-        height: 78%;
+        height: 83%;
         left: -1%;
       }
     }
@@ -197,10 +198,14 @@
     }
     .slick-next {
       right: -14%;
-      @include media-breakpoint-down-xxl {
+      @include media-breakpoint-down-xxxl {
+        right: -8%;
+      }
+      @include media-breakpoint-down-xl {
         right: 50%;
         transform: translateX(50%);
       }
+
       @include media-breakpoint-down-sm {
         display: none !important;
       }
@@ -214,13 +219,25 @@
       z-index: 1;
       border-radius: 50%;
       transition: all 0.3s ease-in-out;
-      @include media-breakpoint-down-xxl {
+      @include media-breakpoint-down-xxxl {
+        width: 40px;
+        height: 40px;
+      }
+      @include media-breakpoint-down-xl {
+        width: 58px;
+        height: 58px;
         top: 104%;
       }
       span {
         position: absolute;
         top: 33%;
         left: 37%;
+        @include media-breakpoint-down-xxxl {
+          top: 32%;
+        }
+        @include media-breakpoint-down-xl {
+          left: 40%;
+        }
         svg {
           border: none;
           path {
@@ -234,18 +251,24 @@
         left: 0;
         border: 1px solid #282828;
         border-radius: 50%;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        // transition: all 600ms ease;
+
         circle {
           stroke-dasharray: 170;
           stroke-dashoffset: 170;
           stroke: #ffba08;
-          transition: all 0.3s ease-in-out;
+          stroke-width: 4;
+          transition: all 0.5s ease-in-out;
+          // transition: all 600ms ease;
         }
       }
       &:hover {
         svg {
           circle {
-            animation: dash 1s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+            stroke-width: 2;
+            stroke-dasharray: 170, 0;
+            stroke-dashoffset: 0;
           }
         }
       }
@@ -254,82 +277,5 @@
     .slick-prev:before {
       display: none;
     }
-  }
-
-  // @keyframes animation {
-  //   from {
-  //     opacity: 0;
-  //     transform: scale(1.2) rotateX(45deg);
-  //   }
-  //   to {
-  //   }
-  // }
-
-  // @keyframes animation2 {
-  //   from {
-  //     opacity: 0;
-  //     transform: scale(1.2) rotateX(45deg);
-  //   }
-  //   to {
-  //   }
-  // }
-  // .slider {
-  //   animation-delay: 0.8s;
-  //   animation-fill-mode: backwards;
-  //   height: 500px;
-  //   perspective: 1000px;
-  //   transition: ease-in-out 0.2s;
-  //   .slide {
-  //     user-select: none;
-  //     position: absolute;
-  //     box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
-  //     background: #fcfcfc;
-  //     transform-style: preserve-3d;
-  //     box-sizing: border-box;
-  //     border-radius: 30px;
-  //   }
-  //   .testimonial-slider-item {
-  //     position: relative;
-  //     padding: 80px 50px 74px;
-  //     .shape {
-  //       position: absolute;
-  //       top: -5%;
-  //       right: 9%;
-  //     }
-  //     .testimonial-slider-person {
-  //       display: flex;
-  //       margin-bottom: 40px;
-  //       .thumb {
-  //         margin-right: 30px;
-  //       }
-  //       .content {
-  //         h3 {
-  //           font-size: 30px;
-  //           line-height: 37.5px;
-  //           margin-bottom: 4px;
-  //         }
-  //         p {
-  //           font-size: 20px;
-  //           color: #282828;
-  //           font-family: $font-primary;
-  //           font-weight: 400;
-  //         }
-  //       }
-  //     }
-  //     p {
-  //       font-size: 25px;
-  //       font-weight: 500;
-  //       line-height: 41.25px;
-  //       letter-spacing: -0.4px;
-  //     }
-  //   }
-  // }
-}
-@keyframes dash {
-  from {
-    stroke-dashoffset: 170;
-  }
-  to {
-    stroke-dashoffset: 0;
   }
 }

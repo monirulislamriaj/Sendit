@@ -10,10 +10,10 @@
     padding: $base-padding * 10 0 $base-padding * 0;
   }
   @include media-breakpoint-down-lg {
-    padding: $base-padding * 12 0 $base-padding * 0;
+    padding: $base-padding * 11.5 0 $base-padding * 0;
   }
   @include media-breakpoint-down-md {
-    padding: $base-padding * 10 0 $base-padding * 0;
+    padding: $base-padding * 9 0 $base-padding * 0;
   }
   @include media-breakpoint-down-sm {
     padding: $base-padding * 8.4 0 $base-padding * 0;
@@ -94,10 +94,13 @@
       padding: $base-padding * 8 0 $base-padding * 2;
     }
     @include media-breakpoint-down-lg {
-      padding: $base-padding * 8 0 $base-padding * 5;
+      padding: $base-padding * 6 0 $base-padding * 5;
     }
     @include media-breakpoint-down-md {
       padding: $base-padding * 6 0 $base-padding * 5;
+    }
+    @include media-breakpoint-down-sm {
+      padding: $base-padding * 5.5 0 $base-padding * 5;
     }
     &-shape {
       position: absolute;
@@ -123,7 +126,7 @@
       }
       h1 {
         line-height: 80px;
-        @include media-breakpoint-down-xxl {
+        @include media-breakpoint-down-xxxl {
           font-size: $base-font-size * 3;
           line-height: 60px;
         }

@@ -2,13 +2,8 @@
  20. Counter Up Section Styles
 **********/
 .counter-up {
-  // padding: $base-padding * 7.5 0;
-  // padding-bottom: $base-padding * 7.1;
   .section-header {
     padding: $base-padding * 5 0 $base-padding * 3.1;
-    // @include media-breakpoint-down-xxl {
-    //   padding: $base-padding * 2 0 $base-padding * 3.1;
-    // }
     p {
       width: 60%;
       margin: 0 auto;

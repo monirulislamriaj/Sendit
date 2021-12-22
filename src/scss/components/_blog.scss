@@ -2,7 +2,7 @@
  16. Blog Page and Section Styles
 **********/
 .blog {
-  margin-top: -$base-margin * 22.5;
+  margin-top: -$base-margin * 22;
   @include media-breakpoint-down-xxl {
     margin-top: -$base-margin * 19.5;
   }
@@ -46,6 +46,7 @@
   }
   // start block section
   &-post {
+    position: relative;
     margin-bottom: $base-margin * 3.2;
     &-thumb {
       border-radius: 20px;
@@ -133,9 +134,12 @@
       }
     }
   }
-  // .more-blog {
-  //   margin: $base-margin * 3 0 $base-margin * 9.5;
-  // }
+  .more-blog {
+    a {
+      font-weight: 700;
+    }
+  }
+  // start block two section
   &-two {
     // padding-bottom: $base-padding * 12.5;
     margin-top: 0;
@@ -156,6 +160,9 @@
     }
     @include media-breakpoint-down-xl {
       padding: $base-padding * 10 0 $base-padding * 2;
+    }
+    @include media-breakpoint-down-sm {
+      padding: $base-padding * 8.5 0 $base-padding * 2;
     }
     article {
       position: relative;
@@ -203,7 +210,6 @@
           }
         }
       }
-
       h3 {
         font-size: $base-font-size * 1.9;
         margin-bottom: $base-margin * 1.5;
@@ -311,7 +317,7 @@
       }
     }
   }
-  /* Related Blog Style */
+  /* start Related Blog Style */
   &-related {
     padding: $base-padding * 9.375 0 $base-padding * 0;
     background: #fff4f2;

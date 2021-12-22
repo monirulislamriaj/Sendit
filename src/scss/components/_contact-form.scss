@@ -20,7 +20,7 @@
       padding: $base-padding * 10 0 $base-padding * 68;
     }
     @include media-breakpoint-down-sm {
-      padding: $base-padding * 8 0 $base-padding * 66;
+      padding: $base-padding * 8.5 0 $base-padding * 66;
     }
 
     &-content {

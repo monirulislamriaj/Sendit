@@ -221,9 +221,12 @@ a {
               background: black;
               width: 10px;
               height: 2px;
-              top: 24%;
+              top: 20%;
               left: -3%;
-              transform: translateY(-50%);
+              @include media-breakpoint-down-xxl {
+                top: 13%;
+                left: -5%;
+              }
             }
           }
         }
@@ -311,7 +314,39 @@ a {
     }
   }
 }
-
+.category {
+  display: none;
+}
+// Learn-more style start
+.Learn-more {
+  display: flex;
+  align-items: center;
+  @include media-breakpoint-down-lg {
+    margin-top: $base-margin * 3;
+  }
+  @include media-breakpoint-down-sm {
+    margin-top: $base-margin * 1.25;
+  }
+  a {
+    color: #e53b2a;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: $font-primary;
+    transition: all 0.3s ease-in-out;
+    i {
+      margin-left: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      transform: translateY(-5px);
+      i {
+        margin-left: 15px;
+      }
+    }
+  }
+}
 /* Cards */
 .card {
   position: relative;
@@ -366,19 +401,22 @@ a {
   box-shadow: none;
 }
 .accordion-button:not(.collapsed)::after {
-  background-image: url('data:image/svg+xml,%3csvg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3e%3ccircle cx="20" cy="20" r="20" fill="%23EBEBEB"/%3e%3cpath d="M13.125 20H26.875" stroke="%23383B3F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/%3e%3c/svg%3e');
+  background-image: url('data:image/svg+xml,%3csvg width="80" height="80" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3e%3ccircle cx="20" cy="20" r="20" fill="%23EBEBEB"/%3e%3cpath d="M13.125 20H26.875" stroke="%23383B3F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/%3e%3c/svg%3e');
   transform: rotate(180deg);
 }
 .accordion-button::after {
-  flex-shrink: 0;
-  width: 1.25rem;
-  height: 1.25rem;
-  margin-left: auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-size: 2.5rem;
   content: "";
-  background-image: url('data:image/svg+xml,%3csvg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3e%3ccircle cx="20" cy="20" r="20" fill="%23EBEBEB"/%3e%3cpath d="M13.125 20H26.875" stroke="%23383B3F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/%3e%3cpath d="M20 13.125V26.875" stroke="%23383B3F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/%3e%3c/svg%3e');
+  background-image: url('data:image/svg+xml,%3csvg width="80" height="80" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3e%3ccircle cx="20" cy="20" r="20" fill="%23EBEBEB"/%3e%3cpath d="M13.125 20H26.875" stroke="%23383B3F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/%3e%3cpath d="M20 13.125V26.875" stroke="%23383B3F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/%3e%3c/svg%3e');
   background-repeat: no-repeat;
-  background-size: 1.25rem;
   transition: transform 0.2s ease-in-out;
+  @include media-breakpoint-down-md {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: 1.5rem;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .accordion-button::after {
@@ -397,25 +435,43 @@ a {
 
 .accordion-header {
   margin-bottom: 0;
+  .header-content {
+    position: relative;
+    font-size: $base-font-size * 1.6;
+    font-weight: 600;
+    font-family: $font-secondary;
+    margin: $base-margin * 0 $base-margin * 25 $base-margin * 0 $base-margin * 0;
+    line-height: 33px;
+    @include media-breakpoint-down-xl {
+      margin: $base-margin * 0 $base-margin * 5 $base-margin * 0 $base-margin *
+        0;
+    }
+    @include media-breakpoint-down-lg {
+      margin: $base-margin * 0 $base-margin * 1 $base-margin * 0 $base-margin *
+        0;
+      font-size: $base-font-size * 1.25;
+    }
+  }
 }
-// .accordion-item ~ .accordion-collapse{
-//   border: 1px solid red;
-// }
+
 .accordion-item {
   position: relative;
   background: #fcfcfc;
   border-radius: 14px !important;
   margin-bottom: 40px;
   border: 1px solid #fff;
-  padding: 30px 40px 30px 90px;
+  padding: 28px 30px 28px 120px;
   @include media-breakpoint-down-md {
     margin-bottom: 20px;
+  }
+  @include media-breakpoint-down-md {
+    padding: 20px 20px 20px 60px;
   }
   span {
     position: absolute;
     display: inline-block;
-    left: 21px;
-    top: 25px;
+    left: 40px;
+    top: 22px;
     text-align: center;
     width: 49px;
     height: 49px;
@@ -429,35 +485,28 @@ a {
     @include media-breakpoint-down-lg {
       top: 20px;
     }
+    @include media-breakpoint-down-md {
+      left: 20px;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 16px;
+    }
   }
 }
 
-// .accordion-item:first-of-type {
-//   border-top-left-radius: 0.5rem;
-//   border-top-right-radius: 0.5rem;
-// }
-// .accordion-item:first-of-type .accordion-button {
-//   border-top-left-radius: calc(0.5rem - 1px);
-//   border-top-right-radius: calc(0.5rem - 1px);
-// }
 .accordion-item:last-of-type {
   margin-bottom: 0;
   border-radius: 0;
 }
-// .accordion-item:last-of-type .accordion-button.collapsed {
-//   border-bottom-right-radius: calc(0.5rem - 1px);
-//   border-bottom-left-radius: calc(0.5rem - 1px);
-// }
-// .accordion-item:last-of-type .accordion-collapse {
-//   border-bottom-right-radius: 0.5rem;
-//   border-bottom-left-radius: 0.5rem;
-// }
 
 .accordion-body {
-  padding: $base-padding * 1.6 $base-padding * 30 $base-padding * 0
+  padding: $base-padding * 1.6 $base-padding * 10 $base-padding * 0
     $base-padding * 0;
   font-size: 20px;
+  color: #4d4d4d;
   letter-spacing: -0.4px;
+  line-height: 33px;
   font-family: $font-secondary;
   @include media-breakpoint-down-xl {
     padding: $base-padding * 1.6 $base-padding * 0 $base-padding * 0
@@ -483,6 +532,9 @@ a {
 .accordion-flush .accordion-item .accordion-button {
   border-radius: 0;
 }
+
+/* acdution-two */
+
 /* Keyframes for hero pages */
 @keyframes grow {
   0% {

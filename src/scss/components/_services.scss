@@ -1,3 +1,7 @@
+/********** 
+ 21.  Services page & section
+**********/
+
 .services {
   padding-bottom: $base-padding * 4.5;
   @include media-breakpoint-down-xl {
@@ -127,7 +131,10 @@
       background: none;
       color: $color-black;
       &::after {
-        background: red;
+        background: #e53b2a;
+      }
+      &::before {
+        background: #ffe1dd;
       }
     }
 
@@ -153,7 +160,7 @@
             width: 2px;
             height: 120px;
             border-radius: 0;
-            top: 0;
+            top: 1px;
             left: -16px;
             transform: translateY(11%);
             @include media-breakpoint-down-xxl {
@@ -177,9 +184,20 @@
             &::after {
               position: absolute;
               content: "";
-              background: black;
+              background: #4d4d4d;
               width: 10px;
               height: 10px;
+              border-radius: 50%;
+              top: 50%;
+              left: -5%;
+              transform: translate(-50%, -50%);
+            }
+            &::before {
+              position: absolute;
+              content: "";
+              background: #e6ebf4;
+              width: 15px;
+              height: 15px;
               border-radius: 50%;
               top: 50%;
               left: -5%;
@@ -231,6 +249,3 @@
     }
   }
 }
-/********** 
- Services
-**********/
