@@ -4,7 +4,7 @@
 
 .cta {
   text-align: center;
-  background: $color-black;
+  background: $color-header;
   .section-header {
     @include media-breakpoint-down-sm {
       padding: $base-padding * 4.2 0 $base-padding * 6.3;
@@ -14,7 +14,7 @@
       margin-bottom: $base-margin * 1.5;
     }
     p {
-      color: #f7f8fa;
+      color: $color-secondary-dark;
       width: 70%;
       margin: 0 auto $base-margin * 2.5;
       @include media-breakpoint-down-xl {
@@ -22,7 +22,7 @@
       }
       @include media-breakpoint-down-sm {
         width: 100%;
-        color: #e6ebf4;
+        color: $color-primary-light;
       }
     }
   }
@@ -39,18 +39,18 @@
           border-top-right-radius: 24px !important;
           padding: 35px 200px 31px 33px;
           background: rgba(229, 59, 42, 0.15);
-          border: 1.20519px solid #e53b2a;
+          border: 1.20519px solid $color-primary;
           z-index: 0;
           @include media-breakpoint-down-sm {
             padding: 20px 180px 20px 20px;
           }
           &:focus {
             box-shadow: none;
-            background: $color-black;
+            background: $color-header;
           }
         }
         ::placeholder {
-          color: #ffe1dd;
+          color: $color-secondary-light;
         }
         .subscribe {
           position: absolute;
@@ -71,7 +71,7 @@
   // start cta two section
   &-two {
     padding: $base-padding * 0 0 $base-padding * 8.5;
-    background: #fff4f2;
+    background: $color-gray-dark;
     @include media-breakpoint-down-xl {
       padding: $base-padding * 0 0 $base-padding * 3;
     }
@@ -81,7 +81,7 @@
         padding-top: $base-padding * 3;
       }
       h2 {
-        color: $color-black;
+        color: $color-header;
       }
       p {
         color: $color-text-light;
@@ -93,7 +93,7 @@
         .input-group {
           .form-control {
             &:focus {
-              border-color: black;
+              border-color: $color-header;
             }
           }
           .subscribe {
@@ -105,7 +105,7 @@
             }
           }
           ::placeholder {
-            color: #e53b2a;
+            color: $color-primary;
           }
         }
       }

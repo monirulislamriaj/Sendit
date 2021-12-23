@@ -4,7 +4,7 @@
 .faq {
   position: relative;
   padding: $base-padding * 0 0 $base-padding * 7.5;
-  background: #fff4f2;
+  background: $color-gray-dark;
   @include media-breakpoint-down-xxl {
     padding: $base-padding * 0 0 $base-padding * 5;
   }
@@ -19,7 +19,6 @@
   }
 
   &-item {
-    //display: none;
     width: calc(50% - 32px);
     margin: 0 $base-margin * 0.8;
     @include media-breakpoint-down-md {
@@ -28,7 +27,6 @@
     }
     .card {
       transition: all 0.3s ease-in-out;
-      //text-align: center;
       padding: $base-padding * 3.7 $base-padding * 3.1 $base-padding * 0.8;
       background: $color-white;
       border-radius: 20px;
@@ -67,7 +65,7 @@
         margin-bottom: $base-margin * 3;
         .card-text {
           font-size: $base-font-size * 1.25;
-          color: #4d4d4d;
+          color: $color-text-light;
           line-height: 35px;
         }
       }
@@ -76,7 +74,7 @@
   // start faq-two section
   &-two {
     padding-bottom: $base-padding * 9.4;
-    background: #fff4f2;
+    background: $color-gray-dark;
     @include media-breakpoint-down-xl {
       padding-bottom: $base-padding * 5;
     }
@@ -90,7 +88,7 @@
       }
     }
     .shows {
-      border: 1px solid #ffba08;
+      border: 1px solid $color-anchor;
     }
   }
 }

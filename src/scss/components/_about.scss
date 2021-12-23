@@ -4,7 +4,7 @@
 .about {
   &-hero-one {
     padding: $base-padding * 4.5 0 $base-padding * 29;
-    background: #f7f8fa;
+    background: $color-secondary-dark;
     @include media-breakpoint-down-xl {
       padding: $base-padding * 4.5 0 $base-padding * 20;
     }
@@ -17,7 +17,7 @@
   }
   &-hero-two {
     padding: $base-padding * 9 0 $base-padding * 3;
-    background: #f7f8fa;
+    background: $color-secondary-dark;
     overflow: hidden;
     @include media-breakpoint-down-xxl {
       padding: $base-padding * 10 0 $base-padding * 11;
@@ -92,7 +92,7 @@
         }
         a {
           font-size: 20px;
-          color: #4d4d4d;
+          color: $color-text-light;
           font-family: $font-secondary;
           font-weight: 500;
           transition: all 0.3s ease-in-out;
@@ -129,7 +129,7 @@
         &::after {
           position: absolute;
           content: "";
-          background: #e53b2a;
+          background: $color-primary;
           width: 100%;
           height: 100%;
           border-radius: 20px;
@@ -301,7 +301,7 @@
     &:hover {
       box-shadow: 0px 40px 60px rgba(189, 189, 189, 0.25);
       border-radius: 10px;
-      background: #fdfdfd;
+      background: $color-gray-light;
 
       &::after {
         transform: scaleX(1);

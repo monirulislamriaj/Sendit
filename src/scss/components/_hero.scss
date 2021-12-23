@@ -86,7 +86,7 @@
   }
   &-two {
     position: relative;
-    background: #fff4f2;
+    background: $color-gray-dark;
     padding: $base-padding * 11.3 0 $base-padding * 5;
     z-index: 1;
     overflow: hidden;
@@ -111,6 +111,9 @@
     &-content {
       margin-top: $base-margin * 3;
       padding-left: $base-padding * 18;
+      @include media-breakpoint-down-xxxl {
+        padding-left: $base-padding * 9;
+      }
       @include media-breakpoint-down-xxl {
         padding-left: $base-padding * 5;
       }
@@ -126,14 +129,6 @@
       }
       h1 {
         line-height: 80px;
-        @include media-breakpoint-down-xxxl {
-          font-size: $base-font-size * 3;
-          line-height: 60px;
-        }
-        @include media-breakpoint-down-xl {
-          font-size: $base-font-size * 2.7;
-          line-height: 60px;
-        }
         @include media-breakpoint-down-lg {
           font-size: $base-font-size * 4;
           line-height: 80px;
@@ -171,185 +166,5 @@
         }
       }
     }
-  }
-}
-
-/* Hero inner pages Styles */
-
-.hero-inner {
-  overflow: hidden;
-  .shapes {
-    @include media-breakpoint-down-md {
-      display: none;
-    }
-    &-item-1 {
-      position: absolute;
-      left: 20%;
-      top: -20px;
-    }
-    &-item-2 {
-      position: absolute;
-      right: 24%;
-      top: -30px;
-    }
-    &-item-3 {
-      position: absolute;
-      right: 13%;
-      bottom: 50%;
-    }
-    &-item-4 {
-      position: absolute;
-      left: 25%;
-      bottom: -5px;
-    }
-    &-item-5 {
-      position: absolute;
-      left: 15%;
-      bottom: -65px;
-    }
-    &-item-6 {
-      position: absolute;
-      right: 19%;
-      bottom: -40px;
-    }
-  }
-  &-title {
-    font-size: $base-font-size * 3.125;
-    line-height: 1.4;
-    margin-bottom: 0;
-  }
-}
-.login-hero {
-  .shapes-item-3 {
-    bottom: 15%;
-  }
-  .shapes-item-4 {
-    display: none;
-  }
-  .shapes-item-5 {
-    display: none;
-  }
-  .shapes-item-6 {
-    display: none;
-  }
-}
-/* Blog Hero pages Styles */
-.blog-hero {
-  .shapes-item-1 {
-    left: 22%;
-    top: -40px;
-  }
-  .shapes-item-2 {
-    right: 28%;
-    top: -65px;
-  }
-  .shapes-item-3 {
-    right: 20%;
-    bottom: 9%;
-  }
-  .shapes-item-4 {
-    left: 13%;
-    bottom: 0;
-  }
-  .shapes-item-6 {
-    right: 18.5%;
-    bottom: 30px;
-  }
-  .hero-inner-title-shape {
-    svg {
-      margin-left: 230px;
-      margin-top: -10px;
-      @include media-breakpoint-down-lg {
-        margin-left: 0;
-        margin-top: 0;
-      }
-    }
-  }
-}
-
-/* Comapny Page Hero Secion */
-.company-hero {
-  .hero-inner-title-shape svg {
-    margin-left: 375px;
-    @include media-breakpoint-down-md {
-      margin-left: 0;
-    }
-  }
-  .shapes-item-4 {
-    bottom: 65px;
-  }
-  .shapes-item-5 {
-    bottom: 0;
-  }
-  .shapes-item-6 {
-    bottom: 0;
-  }
-}
-
-@media (max-width: 574.98px) and (min-width: 500px) {
-  .hero-content .hero-content-shape .shape-one {
-    transform: translate(-50%, -75px);
-  }
-}
-/* Keyframes for hero pages */
-@keyframes grow {
-  0% {
-    transform: scale(0.9) translate(-50%, -50%);
-  }
-
-  100% {
-    transform: scale(1) translate(-50%, -50%);
-  }
-}
-
-@keyframes up-down-animation {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
-}
-@keyframes up-down-rev-animation {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(20px);
-  }
-}
-@keyframes left-right-animation {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-20px);
-  }
-}
-
-@keyframes right-left-animation {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(20px);
-  }
-}
-
-@keyframes scale-animation {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes rotate-animation {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }

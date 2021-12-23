@@ -2,9 +2,9 @@
   11. Testimonial Section Styles 
 **********/
 .testimonial {
-  background: $color-black;
+  background: $color-header;
   position: relative;
-  border-bottom: 1px solid #282828;
+  border-bottom: 1px solid $color-text;
   overflow: hidden;
   @include media-breakpoint-down-sm {
     border-bottom: none;
@@ -23,7 +23,7 @@
       font-size: $base-font-size * 2.8;
       margin-bottom: $base-margin * 1.4;
       span {
-        color: #ffba08;
+        color: $color-anchor;
       }
       @include media-breakpoint-down-xl {
         font-size: $base-font-size * 2.5;
@@ -34,7 +34,7 @@
     }
     p {
       font-size: 22px;
-      color: #f3f3f3;
+      color: $color-cyan-dark;
       font-weight: 500;
       line-height: 36.3px;
       letter-spacing: -0.4px;
@@ -63,7 +63,7 @@
       position: absolute;
       height: 90%;
       width: 100%;
-      background-color: #5f5f5f;
+      background-color: $color-cyan-light;
       opacity: 0.9;
       border-radius: 50px;
       transform: translate(-5%, -50%);
@@ -157,16 +157,10 @@
         img {
           width: 100%;
         }
-        // @include media-breakpoint-down-sm {
-        //   margin: 0 auto;
-        // }
       }
 
       .content {
         margin-left: 20px;
-        // @include media-breakpoint-down-sm {
-        //   margin-left: 0;
-        // }
         h3 {
           font-size: 30px;
           margin-bottom: 4px;
@@ -241,7 +235,7 @@
         svg {
           border: none;
           path {
-            stroke: #ffba08;
+            stroke: $color-anchor;
           }
         }
       }
@@ -249,18 +243,16 @@
         position: absolute;
         top: 0;
         left: 0;
-        border: 1px solid #282828;
+        border: 1px solid $color-text;
         border-radius: 50%;
         transition: all 0.5s ease-in-out;
-        // transition: all 600ms ease;
 
         circle {
           stroke-dasharray: 170;
           stroke-dashoffset: 170;
-          stroke: #ffba08;
+          stroke: $color-anchor;
           stroke-width: 4;
           transition: all 0.5s ease-in-out;
-          // transition: all 600ms ease;
         }
       }
       &:hover {

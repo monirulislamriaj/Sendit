@@ -44,6 +44,9 @@
       }
       img {
         max-width: 100%;
+        @include media-breakpoint-down-lg {
+          width: 100%;
+        }
       }
     }
     &-body {
@@ -66,7 +69,7 @@
       line-height: 29.7px;
       letter-spacing: -0.008px;
       font-weight: 500;
-      color: #4d4d4d;
+      color: $color-text-light;
       @include media-breakpoint-down-lg {
         padding: 0 $base-padding * 5;
       }
@@ -103,7 +106,7 @@
   }
 
   &-two {
-    background: #fff4f2;
+    background: $color-gray-dark;
     position: relative;
     padding: $base-padding * 9.4 0 $base-padding * 8.1;
     @include media-breakpoint-down-xxl {
@@ -116,7 +119,7 @@
       padding: $base-padding * 3.1 0 $base-padding * 3;
     }
     .navbar {
-      background-color: white;
+      background-color: $color-white;
       position: sticky;
       top: 150px;
       padding: 0;
@@ -129,18 +132,17 @@
     .nav-pills .nav-link.active,
     .nav-pills .show > .nav-link {
       background: none;
-      color: $color-black;
+      color: $color-header;
       &::after {
-        background: #e53b2a;
+        background: $color-primary;
       }
       &::before {
-        background: #ffe1dd;
+        background: $color-secondary-light;
       }
     }
 
     &-nav {
       display: block;
-      // margin-bottom: $base-padding * 12.5;
       background-color: none;
 
       .nav-pills {
@@ -156,7 +158,7 @@
           &::before {
             content: "";
             position: absolute;
-            background: #e6ebf4;
+            background: $color-primary-light;
             width: 2px;
             height: 120px;
             border-radius: 0;
@@ -176,7 +178,7 @@
           a {
             font-size: 26px;
             position: relative;
-            color: #4d4d4d;
+            color: $color-text-light;
             font-family: $font-primary;
             font-weight: 600;
             margin-bottom: 0px;
@@ -184,7 +186,7 @@
             &::after {
               position: absolute;
               content: "";
-              background: #4d4d4d;
+              background: $color-text-light;
               width: 10px;
               height: 10px;
               border-radius: 50%;
@@ -195,7 +197,7 @@
             &::before {
               position: absolute;
               content: "";
-              background: #e6ebf4;
+              background: $color-primary-light;
               width: 15px;
               height: 15px;
               border-radius: 50%;
@@ -220,11 +222,13 @@
         @include media-breakpoint-down-lg {
           margin-bottom: $base-margin * 2.5;
         }
-        // opacity: 0.5;
         h3 {
-          color: #4d4d4d;
+          color: $color-text-light;
           font-size: $base-font-size * 2.8;
           margin-bottom: $base-margin * 2.5;
+          @include media-breakpoint-down-lg {
+            font-size: $base-font-size * 2.2;
+          }
           @include media-breakpoint-down-md {
             font-size: $base-font-size * 1.9;
           }
@@ -236,7 +240,7 @@
             margin-bottom: 50px;
             font-size: $base-font-size * 1.4;
             line-height: 36.3px;
-            color: #4d4d4d;
+            color: $color-text-light;
           }
           .card-banner {
             margin-bottom: 50px;

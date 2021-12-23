@@ -35,15 +35,7 @@
     pointer-events: none;
     box-shadow: none;
   }
-  // @include media-breakpoint-down-sm {
-  //   display: block;
-  //   width: 100%;
-  //   margin: 0 auto;
-  // }
 }
-//
-//Over Ride Default Button Styles
-//
 
 .btn {
   position: relative;
@@ -122,8 +114,8 @@
 
   &-links {
     background: transparent;
-    color: $color-primary-light;
-    border: $base-border-width solid rgba(229, 59, 42, 0.3);
+    color: $color-primary;
+    border: 1px solid rgba(229, 59, 42, 0.3);
     position: relative;
     transition: all 0.3s ease-in-out;
 
@@ -141,7 +133,7 @@
   &-white {
     color: $color-primary;
     background: $color-white;
-    border: 1px solid #ffe1dd;
+    border: 1px solid $color-secondary-light;
     font-weight: 700;
 
     &:hover {
@@ -187,22 +179,12 @@
 }
 
 /* button label Styles */
-.btn-label {
-  padding: $base-padding * 0.875 $base-padding * 1.25;
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 10px;
-  line-height: 1.45 !important;
-  font-weight: $extbold-font-weight !important;
-  font-size: $base-font-size * 0.875 !important;
-  width: auto;
-}
+
 .btn-submit {
   background: $color-white;
   color: $color-primary;
   line-height: 1.6;
   font-size: $base-font-size * 0.875;
-  //font-weight: $font-weight-extbold;
   border: 1px solid $color-primary;
   padding: $base-padding * 1.25 $base-padding * 2.125 !important;
   &:active,
@@ -214,20 +196,5 @@
     background: $color-primary;
     color: $color-white !important;
     border: 1px solid rgba(255, 255, 255, 0.4);
-  }
-}
-.btn-social {
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: $color-white;
-  padding: $base-padding * 1.25 $base-padding * 1.5 !important;
-  svg {
-    margin-right: $base-margin * 0.5;
-  }
-  &:active,
-  &:focus,
-  &:hover {
-    background: transparent;
-    color: $color-white !important;
   }
 }

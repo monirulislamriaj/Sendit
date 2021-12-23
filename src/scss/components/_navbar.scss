@@ -39,7 +39,7 @@
     border-radius: 0;
     width: 100%;
     // width: calc(100% - 32px) !important;
-    background: white;
+    background: $color-white;
   }
 }
 @include media-breakpoint-down-sm {
@@ -73,7 +73,7 @@
   justify-content: center;
   align-items: center;
   @include media-breakpoint-down-lg {
-    margin-top: $base-margin * 1.5 !important;
+    margin-top: $base-margin * 4.5 !important;
     justify-content: start;
     align-items: start;
     // height: calc(100vh - 76px);
@@ -91,7 +91,7 @@
       color: $color-primary;
     }
     &:hover {
-      color: $color-primary-light;
+      color: $color-primary;
     }
     @include media-breakpoint-only-lg {
       padding-right: 0.75rem !important;
@@ -104,7 +104,7 @@
       background: $color-white;
       min-width: 188px;
       transition: all 0.3s ease-in-out;
-      border: 0 solid #e8e8e8;
+      border: 0 solid $color-primary-dark;
       border-radius: 1.25rem;
       padding: 10px 30px 20px;
       right: 1.5rem;
@@ -131,19 +131,19 @@
         padding-bottom: 0.5rem;
       }
       &:nth-child(1) {
-        border-bottom: 1px solid #f7f8fa;
+        border-bottom: 1px solid $color-secondary-dark;
       }
     }
     &-item {
       margin-bottom: 0;
-      color: #4d4d4d;
+      color: $color-text-light;
       font-weight: 600;
       text-align: left;
       font-size: $base-font-size * 1.1;
       padding: 0;
       background: none;
       &:hover {
-        color: red;
+        color: $color-primary;
       }
     }
     .nav-arrow {
@@ -152,7 +152,7 @@
       right: 15px;
     }
     .dropdown-megamenu-conatiner {
-      border-bottom: 1px solid #f7f8fa;
+      border-bottom: 1px solid $color-secondary-dark;
       &:last-child {
         border-bottom: 0;
       }
@@ -168,7 +168,7 @@
         visibility: visible;
         transform: scaleY(0);
         top: 100%;
-        border: 1px solid #ffe1dd;
+        border: 1px solid $color-secondary-light;
         transform-origin: 0 0 0;
       }
 
@@ -231,7 +231,7 @@
         transform-origin: 0 0 0;
         height: auto;
         text-align: center;
-        background: #f7f8fa;
+        background: $color-secondary-dark;
         width: calc(100% + 2rem);
         margin-left: -3rem;
         border-radius: 0;
@@ -267,6 +267,11 @@
     padding: $base-padding * 1.5 !important;
   }
 }
+@include media-breakpoint-down-sm {
+  .sticky-nav {
+    padding: $base-padding * 1 $base-padding * 0 !important;
+  }
+}
 /**
  * Note: I have omitted any vendor-prefixes for clarity.
  * Adding them is left as an exercise for the reader.
@@ -300,8 +305,8 @@
   position: absolute;
   bottom: 0;
   left: 50px;
-  background: black;
-  color: white;
+  background: $color-header;
+  color: $color-white;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -309,9 +314,14 @@
   line-height: 60px;
   justify-content: center;
   margin-bottom: 50px;
+  @include media-breakpoint-down-sm {
+    .sticky-nav {
+      left: 25px;
+    }
+  }
   svg {
     path {
-      stroke: white;
+      stroke: $color-white;
     }
   }
 }

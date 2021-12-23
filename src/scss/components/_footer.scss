@@ -3,7 +3,7 @@
 **********/
 .footer {
   position: relative;
-  background: $color-black;
+  background: $color-header;
   &-wrapper {
     max-width: 1500px;
     margin: 0 auto;
@@ -34,7 +34,7 @@
         }
       }
       p {
-        color: #f7f8fa;
+        color: $color-secondary-dark;
         font-family: $font-primary;
         font-size: $base-font-size * 0.9;
         font-weight: 600;
@@ -71,14 +71,14 @@
               transform: translateY(0px);
               path {
                 transition: all 0.3s ease-in-out;
-                fill: white;
+                fill: $color-white;
               }
             }
             &:hover {
               svg {
                 transform: translateY(-10px);
                 path {
-                  fill: #ffba08;
+                  fill: $color-anchor;
                 }
               }
             }
@@ -104,7 +104,7 @@
     }
     h6 {
       margin-bottom: $base-margin * 1.6;
-      color: #f7f8fa;
+      color: $color-secondary-dark;
       font-family: $font-primary;
       font-size: $base-font-size * 0.9;
       font-weight: 600;
@@ -120,7 +120,7 @@
           font-weight: 600;
           transition: all 0.3s ease-in-out;
           &:hover {
-            color: #ffba08;
+            color: $color-anchor;
           }
         }
       }

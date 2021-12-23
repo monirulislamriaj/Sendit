@@ -25,7 +25,7 @@
   }
 }
 @mixin media-breakpoint-up-xxxl {
-  @media (min-width: 1600px) {
+  @media (min-width: 1700px) {
     @content;
   }
 }
@@ -58,7 +58,7 @@
   }
 }
 @mixin media-breakpoint-down-xxxl {
-  @media (max-width: 1599.98px) {
+  @media (max-width: 1699.98px) {
     @content;
   }
 }

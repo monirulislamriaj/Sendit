@@ -3,7 +3,7 @@
 **********/
 
 .sing-up {
-  background: #fffbf3;
+  background: $color-header-light;
   &-body {
     background: $color-primary;
     border-radius: 1.25rem;
@@ -144,9 +144,9 @@
       border: 1px solid rgba(255, 255, 255, 0.4);
       border-radius: 10px !important;
       &:focus {
-        color: #ffffff;
+        color: $color-white;
         background-color: rgba(255, 255, 255, 0.2);
-        border-color: #fff;
+        border-color: $color-white;
         outline: 0;
         box-shadow: none;
       }

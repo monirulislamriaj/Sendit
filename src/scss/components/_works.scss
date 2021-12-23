@@ -4,9 +4,9 @@
 
 .works {
   padding: $base-padding * 9.4 $base-padding * 0 $base-padding * 3.2;
+  overflow: hidden;
   @include media-breakpoint-down-xxl {
     padding: $base-padding * 6 $base-padding * 0 $base-padding * 3.2;
-    overflow: hidden;
   }
   @include media-breakpoint-down-xl {
     padding: $base-padding * 6 $base-padding * 0 $base-padding * 0;
@@ -51,7 +51,7 @@
     &::after {
       position: absolute;
       content: "";
-      background: #e53b2a;
+      background: $color-primary;
       width: 100%;
       height: 100%;
       border-radius: 20px;

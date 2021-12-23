@@ -7,7 +7,7 @@
     padding-bottom: $base-padding * 5;
   }
   &-hero {
-    background: #f7f8fa;
+    background: $color-secondary-dark;
     padding: $base-padding * 17.4 0 $base-padding * 9.6;
     @include media-breakpoint-down-xl {
       padding: $base-padding * 13 0 $base-padding * 5;
@@ -34,7 +34,7 @@
       }
       p {
         font-size: $base-font-size * 1.4;
-        color: #4d4d4d;
+        color: $color-text-light;
         font-weight: 500;
         line-height: 36.3px;
         width: 80%;
@@ -57,27 +57,27 @@
       }
       p {
         font-size: $base-font-size * 1.25;
-        color: #4d4d4d;
+        color: $color-text-light;
         margin-bottom: $base-margin * 2.6;
         @include media-breakpoint-down-md {
           margin-bottom: $base-margin * 1.5;
         }
       }
       .item {
-        background: #f7f8fa;
+        background: $color-secondary-dark;
         border-radius: 10px;
         padding: $base-padding * 0.9 $base-padding * 1.25;
         h3 {
           font-size: $base-font-size * 0.8;
           font-weight: 300;
-          color: #4d4d4d;
+          color: $color-text-light;
           margin-bottom: $base-margin * 0.3;
         }
         a {
           display: flex;
           justify-content: space-between;
           font-size: $base-font-size * 1.25;
-          color: $color-black;
+          color: $color-header;
           font-family: $font-secondary;
           font-weight: 700;
           span {
@@ -91,13 +91,13 @@
     position: relative;
     z-index: 1;
     form {
-      border: 1px solid #f7f8fa;
+      border: 1px solid $color-secondary-dark;
       box-shadow: 0px 0px 80px rgba(150, 0, 0, 0.06);
       border-radius: 20px;
       z-index: 1;
       margin-top: -$base-margin * 28.2;
       padding: $base-padding * 4.2 $base-padding * 3.3 $base-padding * 3.1;
-      background: #ffffff;
+      background: $color-white;
       @include media-breakpoint-down-xl {
         margin-top: -$base-margin * 22;
       }
@@ -118,21 +118,21 @@
       .label {
         margin-bottom: $base-margin * 0.8;
         font-weight: 600;
-        color: #282828;
+        color: $color-text;
       }
       .form-control {
         padding: 19px 20px;
         font-size: $base-font-size * 0.9;
         font-weight: 600;
-        color: $color-black;
-        background: #f7f8fa;
-        border: 1px solid #dddddd;
+        color: $color-header;
+        background: $color-secondary-dark;
+        border: 1px solid $color-text-dark;
         border-radius: 10px;
         margin-bottom: $base-margin * 1.9;
 
         &:focus {
-          background: #fff7e1;
-          border: 1px solid #ffba08;
+          background: $color-header-dark;
+          border: 1px solid $color-anchor;
           outline: 0;
           box-shadow: none;
         }
@@ -141,7 +141,7 @@
         resize: none;
       }
       ::placeholder {
-        color: #808080;
+        color: $color-cyan;
       }
     }
     .effect {

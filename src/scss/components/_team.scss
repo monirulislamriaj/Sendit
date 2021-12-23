@@ -35,18 +35,21 @@
       margin-bottom: $base-margin * 1.5;
       img {
         max-width: 100%;
+        @include media-breakpoint-down-md {
+          width: 100%;
+        }
       }
     }
     &-details {
       h3 {
         font-size: $base-font-size * 1.6;
-        color: $color-black;
+        color: $color-header;
         margin-bottom: $base-margin * 0.3;
         font-weight: 600;
       }
       p {
         font-size: $base-font-size * 1.25;
-        color: #4d4d4d;
+        color: $color-text-light;
         font-family: $font-primary;
         @include media-breakpoint-down-xl {
           font-size: $base-font-size * 1.2;

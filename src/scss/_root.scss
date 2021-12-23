@@ -13,7 +13,7 @@ body {
 .bg-nav {
   background: rgba($color-secondary, 0.95);
   &.sticky-nav {
-    background: white;
+    background: $color-white;
   }
 }
 h1,
@@ -74,7 +74,7 @@ a {
 }
 // Learn-more links
 .load-mores {
-  color: red;
+  color: $color-primary;
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -124,12 +124,13 @@ a {
   }
   &-wrapper {
     display: flex;
-    background: #ffffff;
-    border-radius: 20px 20px 0px 0px;
+    background: $color-white;
     padding: $base-padding * 5 0 $base-padding * 5 $base-padding * 1.6;
+    box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
   }
   .navbar {
-    background-color: white;
+    background: $color-white;
     position: sticky;
     top: 150px;
     padding: 0;
@@ -142,7 +143,7 @@ a {
   .nav-pills .nav-link.active,
   .nav-pills .show > .nav-link {
     background: none;
-    color: red;
+    color: $color-primary;
   }
 
   &-nav {
@@ -168,7 +169,7 @@ a {
         a {
           font-size: $base-font-size;
           position: relative;
-          color: #4d4d4d;
+          color: $color-text-light;
           font-family: $font-primary;
           font-weight: 600;
           margin-bottom: 0px;
@@ -188,7 +189,7 @@ a {
         margin-bottom: $base-margin * 3.1;
       }
       h3 {
-        color: #4d4d4d;
+        color: $color-text-light;
         font-size: $base-font-size * 1.9;
         margin-bottom: $base-margin * 1.9;
       }
@@ -196,7 +197,7 @@ a {
         padding: 0;
         .card-text {
           line-height: 29.7px;
-          color: #4d4d4d;
+          color: $color-text-light;
           font-size: $base_font-size * 1.1;
           font-weight: 500;
           margin-bottom: $base-margin * 2.5;
@@ -212,14 +213,14 @@ a {
             position: relative;
             list-style: none;
             line-height: 29.7px;
-            color: #4d4d4d;
+            color: $color-text-light;
             font-size: $base_font-size * 1.1;
             font-weight: 500;
             margin-bottom: $base-margin * 1.25;
             &::after {
               position: absolute;
               content: "";
-              background: black;
+              background: $color-header;
               width: 10px;
               height: 2px;
               top: 20%;
@@ -295,7 +296,7 @@ a {
   background: $color-secondary;
 }
 .pricing-inner {
-  background: #fff4f2;
+  background: $color-gray-dark;
 }
 .pricing-inner-two {
   background: $color-secondary;
@@ -303,7 +304,7 @@ a {
 // 404 page style
 .error {
   position: relative;
-  background: linear-gradient(239.24deg, #f4f7fe 22.34%, #fbfcff 83.1%);
+  background: $color-secondary;
   &-content {
     position: relative;
     h3 {
@@ -329,7 +330,7 @@ a {
     margin-top: $base-margin * 1.25;
   }
   a {
-    color: #e53b2a;
+    color: $color-primary;
     display: flex;
     align-items: center;
     font-size: 18px;
@@ -355,7 +356,7 @@ a {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background: $color-white;
   background-clip: border-box;
   border-radius: 0.5rem;
   border: none;
@@ -368,10 +369,10 @@ a {
   width: 100%;
   padding: 0;
   font-size: $base-font-size * 1.6;
-  color: #000;
+  color: $color-header;
   font-family: $font-primary;
   text-align: left;
-  background: #fcfcfc;
+  background: $color-gray;
   border: 0;
   font-weight: 600;
   border-radius: 0;
@@ -385,10 +386,6 @@ a {
   @include media-breakpoint-down-md {
     font-size: $base-font-size * 1.1;
   }
-
-  // &:focus{
-  //   border: 1px solid #FFBA08;
-  // }
 }
 @media (prefers-reduced-motion: reduce) {
   .accordion-button {
@@ -397,8 +394,8 @@ a {
 }
 .accordion-button:not(.collapsed) {
   padding: 0rem 0rem 0 0rem;
-  color: #000;
-  background: #fcfcfc;
+  color: $color-header;
+  background: $color-gray;
   box-shadow: none;
 }
 .accordion-button:not(.collapsed)::after {
@@ -406,6 +403,9 @@ a {
   transform: rotate(180deg);
 }
 .accordion-button::after {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 2.5rem;
   height: 2.5rem;
   background-size: 2.5rem;
@@ -452,22 +452,24 @@ a {
         0;
       font-size: $base-font-size * 1.25;
     }
+    @include media-breakpoint-down-sm {
+      line-height: 25px;
+    }
   }
 }
 
 .accordion-item {
   position: relative;
-  background: #fcfcfc;
+  background: $color-gray;
   border-radius: 14px !important;
   margin-bottom: 40px;
-  border: 1px solid #fff;
+  border: 1px solid $color-white;
   padding: 28px 30px 28px 120px;
-  @include media-breakpoint-down-md {
+  @include media-breakpoint-down-lg {
     margin-bottom: 20px;
-  }
-  @include media-breakpoint-down-md {
     padding: 20px 20px 20px 60px;
   }
+
   span {
     position: absolute;
     display: inline-block;
@@ -477,21 +479,24 @@ a {
     width: 49px;
     height: 49px;
     line-height: 49px;
-    background: #f7f8fa;
-    border: 2px solid #e6ebf4;
+    background: $color-secondary-dark;
+    border: 2px solid $color-primary-light;
     border-radius: 50%;
     margin-right: 0px;
     font-size: 20px;
     font-weight: 400;
+
     @include media-breakpoint-down-lg {
-      top: 20px;
-    }
-    @include media-breakpoint-down-md {
+      top: 25px;
       left: 20px;
       width: 30px;
       height: 30px;
       line-height: 30px;
       font-size: 16px;
+    }
+    @include media-breakpoint-down-sm {
+      line-height: 25px;
+      top: 20px;
     }
   }
 }
@@ -505,7 +510,7 @@ a {
   padding: $base-padding * 1.6 $base-padding * 10 $base-padding * 0
     $base-padding * 0;
   font-size: 20px;
-  color: #4d4d4d;
+  color: $color-text-light;
   letter-spacing: -0.4px;
   line-height: 33px;
   font-family: $font-secondary;
@@ -517,7 +522,7 @@ a {
 
 .accordion-flush .accordion-collapse {
   border-width: 0;
-  border: 1px solid red;
+  border: 1px solid $color-primary;
 }
 .accordion-flush .accordion-item {
   border-right: 0;
@@ -534,8 +539,6 @@ a {
   border-radius: 0;
 }
 
-/* acdution-two */
-
 /* Keyframes for hero pages */
 @keyframes grow {
   0% {
@@ -544,57 +547,5 @@ a {
 
   100% {
     transform: scale(1) translate(-50%, -50%);
-  }
-}
-
-@keyframes up-down-animation {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
-}
-@keyframes up-down-rev-animation {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(20px);
-  }
-}
-@keyframes left-right-animation {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-20px);
-  }
-}
-
-@keyframes right-left-animation {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(20px);
-  }
-}
-
-@keyframes scale-animation {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes rotate-animation {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
