@@ -129,7 +129,7 @@ $(function () {
   } else {
     input.attr("type", "password");
   }
-});
+  });
   // Scroll spy style start
   $(".nav-link").click(function () {
     $(".nav-link").removeClass("active");
@@ -198,18 +198,9 @@ $(function () {
    var calcpriceBusiness;
    calcpricePro = (ui.value + pricePro);
    calcpriceBusiness = (ui.value + priceBusiness);
- 
    var outputPro;
    var outputinfo;
    var outputBusiness;
-   // if(1) {
-   //   $(".pricingtable").show();
-   //   $(".pricingtable-two").show()
-   //   // $(".enterprisepricing").show();
-   //  } //else {
-   //   $(".pricingtable").show();
-   //   // $(".enterprisepricing").hide();
-   // } 
    outputPro = ("$" + calcpricePro + "");
    outputBusiness = ("$" + calcpriceBusiness + "");
  
@@ -235,19 +226,12 @@ $(function () {
    var value=$s.slider("value");
    calcpricePro = (value + pricePro);
    calcpriceBusiness = (value + priceBusiness)
- 
-   // if (1) {
      
    $('.pricingtable').html("$" + calcpricePro + "");
    $('.pricingtable-two').html("$" + calcpriceBusiness + "");
    
    outputdispro = ("$" + (calcpricePro + 20) + "");
    outputdisbuss = ("$" + (calcpriceBusiness + 50) + "");
-     
-   // } else {
-   //   $('.pricingtable').html("$" + calcpricePro + "/mo");
-   //   $('.pricingtable-two').html("$" + calcpriceBusiness + "/mo");
-   // }
    outputinfo = (ui.value);
    $('.employeenocont-one').html(outputinfo);
  }
@@ -290,7 +274,6 @@ function copyToClipboard(text, el) {
 });
   
   // Add active class to the current accordionExample
-
   var header = document.getElementById("accordionExample");
   var btns = header.getElementsByClassName("accordion-item");
   for (var i = 0; i < btns.length; i++) {
@@ -301,5 +284,6 @@ function copyToClipboard(text, el) {
     });
   }
   var selector = '.accordion-item';
-});
 
+ 
+});

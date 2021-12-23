@@ -73,13 +73,14 @@ a {
   }
 }
 // Learn-more links
-.load-more {
+.load-mores {
   color: red;
   font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  font-weight: 700;
 }
 .next-blog {
   display: none;

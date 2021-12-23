@@ -26,9 +26,7 @@
       padding: 0.75rem 1rem;
     }
   }
-  @include media-breakpoint-down-lg {
-    padding: 1.5rem;
-  }
+
   // Navbar button position fixing
   .nav-item {
     list-style: none;
@@ -36,11 +34,12 @@
 }
 @include media-breakpoint-down-lg {
   .navbar {
-    margin: $base-margin * 1;
+    margin: $base-margin * 0;
     padding: 1.5rem;
-    border-radius: 0.5rem;
-    width: calc(100% - 32px) !important;
-    // background: wheat;
+    border-radius: 0;
+    width: 100%;
+    // width: calc(100% - 32px) !important;
+    background: white;
   }
 }
 @include media-breakpoint-down-sm {
@@ -233,8 +232,8 @@
         height: auto;
         text-align: center;
         background: #f7f8fa;
-        width: calc(100% + 0rem);
-        margin-left: -2rem;
+        width: calc(100% + 2rem);
+        margin-left: -3rem;
         border-radius: 0;
         margin-top: -60px;
       }
@@ -263,9 +262,9 @@
   z-index: 1000;
 }
 
-@include media-breakpoint-down-sm {
+@include media-breakpoint-down-lg {
   .sticky-nav {
-    padding: $base-padding !important;
+    padding: $base-padding * 1.5 !important;
   }
 }
 /**
@@ -300,7 +299,7 @@
   display: flex;
   position: absolute;
   bottom: 0;
-  left: 66px;
+  left: 50px;
   background: black;
   color: white;
   width: 60px;
