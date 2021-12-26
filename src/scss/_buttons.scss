@@ -198,3 +198,19 @@
     border: 1px solid rgba(255, 255, 255, 0.4);
   }
 }
+.btn-social {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: $color-white;
+  padding: $base-padding * 1.25 $base-padding * 1.5 !important;
+
+  svg {
+    margin-right: $base-margin * 0.5;
+  }
+  &:active,
+  &:focus,
+  &:hover {
+    background: transparent;
+    color: $color-white !important;
+  }
+}
