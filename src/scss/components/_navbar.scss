@@ -300,28 +300,28 @@
 .navbar-toggler .navbar-toggler-toggled {
   display: none;
 }
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-toggled {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  left: 50px;
-  background: $color-header;
-  color: $color-white;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  align-items: center;
-  line-height: 60px;
-  justify-content: center;
-  margin-bottom: 50px;
-  @include media-breakpoint-down-sm {
-    .sticky-nav {
-      left: 25px;
-    }
-  }
-  svg {
-    path {
-      stroke: $color-white;
-    }
-  }
-}
+// .navbar-toggler[aria-expanded="true"] .navbar-toggler-toggled {
+//   display: flex;
+//   position: absolute;
+//   bottom: 0;
+//   left: 50px;
+//   background: $color-header;
+//   color: $color-white;
+//   width: 60px;
+//   height: 60px;
+//   border-radius: 50%;
+//   align-items: center;
+//   line-height: 60px;
+//   justify-content: center;
+//   margin-bottom: 50px;
+//   @include media-breakpoint-down-sm {
+//     .sticky-nav {
+//       left: 25px;
+//     }
+//   }
+//   svg {
+//     path {
+//       stroke: $color-white;
+//     }
+//   }
+// }
